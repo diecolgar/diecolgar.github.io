@@ -1,0 +1,42 @@
+@media (max-width: 800px) {
+	body {
+		overflow-y: auto;
+	}
+	.content {
+		scroll-snap-type: y mandatory;
+		overflow-y: scroll;
+		height: 100vh;
+		background-image: none;
+	}
+	section {
+		scroll-snap-align: start;
+	}
+	.home {
+		background-image: url('../img/background1.jpg');
+		background-position: center;
+		background-size: cover;
+		.titleimage {
+			margin-top: 2rem;
+			width: 80vw;
+			height: 20vh;
+		}
+		.separator {
+			margin-top: 1rem;
+		}
+	}
+	.aboutme {
+		background-image: url('../img/background2.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+	.mywork {
+		background-image: url('../img/background3.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+	.contact {
+		background-image: url('../img/background4.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+}

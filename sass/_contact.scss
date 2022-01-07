@@ -1,0 +1,18 @@
+.contact {
+	display: flex;
+	transform: translateY(-20vh);
+	opacity: 0;
+	transition: 0.8s;
+	div {
+		position: relative;
+		top: 70vh;
+		left: 50vw;
+		color: white;
+		font-size: 7vw;
+		// text-transform: uppercase;
+	}
+	&.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
