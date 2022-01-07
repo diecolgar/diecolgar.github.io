@@ -1,4 +1,4 @@
-// ----- VARIABLES -----
+// ---------- VARIABLES ---------- //
 
     // GLOBAL DEFINITIONS
 const content = document.querySelector(".content")
@@ -12,6 +12,7 @@ const aboutme = document.querySelector(".aboutme")
 const mywork = document.querySelector(".mywork")
 const contact = document.querySelector(".contact")
 
+const navBrand = document.querySelector("nav .left")
 const navMenu = document.querySelector("nav .right .menu")
 const displayableMenu = document.querySelector(".displayable-menu")
 
@@ -24,9 +25,9 @@ let allowDisplacement = true
 let displaced = 0
 let currentSlide = 0
 
-// ----- FUNCTIONS -----
+// ---------- FUNCTIONS ---------- //
 
-    // This function, inside a TimeOut, enables the displacement to prevent fast sliding
+// ENABLING DISPLACEMENT
 function enableDisplacement() {
     allowDisplacement = true
 }
@@ -49,6 +50,14 @@ function activateSlide() {
     });
 }
 
+// MOVING SLIDES
+function moveSlide() {
+    content.style.transform = `translateY(${-currentSlide*100}vh)`
+    setTimeout(enableDisplacement, 1000)
+    setTimeout(activateSlide, 500)
+}
+
+
 // SCREEN PARAMETERS
 let screen_height = screen.height
 let screen_width = screen.width
@@ -56,7 +65,6 @@ let screen_width = screen.width
 // THIS WEB PAGE BEHAVIOUR IS ESSENTIALLY DIFFERENT FOR MOBILE (SLIDING) AND COMPUTER (MOUSEWHEEL/TOUCHPAD) DEVICES
 // DUE TO THE INEFFICIENT SNAP SCROLLING THAT CSS PROVIDES FOR PC AND MY DESIRE OF DEVELOPING MYSELF THE SLIDING EFFECT
 // INSTEAD OF USING LIBRARIES
-
 window.addEventListener("resize", function(event) {
     console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
 
@@ -73,17 +81,13 @@ window.addEventListener("wheel", event => {
     if ((event.deltaY > 0)  && (lasttopPosition > 100) && (allowDisplacement)) { 
         allowDisplacement = false
         currentSlide++
-        content.style.transform = `translateY(${-currentSlide*100}vh)`
-        setTimeout(enableDisplacement, 1000)
-        setTimeout(activateSlide, 500)
+        moveSlide()
         
     // SLIDE UP
     } else if ((event.deltaY < 0) && (firsttopPosition < -100) && (allowDisplacement)) {
         allowDisplacement = false
         currentSlide--
-        content.style.transform = `translateY(${-currentSlide*100}vh)`
-        setTimeout(enableDisplacement, 1000)
-        setTimeout(activateSlide, 500)
+        moveSlide()
     }
 })
 
@@ -97,10 +101,13 @@ menuItem.forEach((menuItem, id) => {
     menuItem.addEventListener("click", () => {
         displayableMenu.classList.toggle('hidden')
         currentSlide = id
-        content.style.transform = `translateY(${-currentSlide*100}vh)`
-        allowDisplacement = false
-        setTimeout(enableDisplacement, 1000)
-        setTimeout(activateSlide, 500)
+        moveSlide()
     })
+})
+
+// NAV BRAND CLICK EVENT LISTENER
+navBrand.addEventListener("click", () => {
+    currentSlide = 0
+    moveSlide()
 })
 

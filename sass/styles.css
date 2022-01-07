@@ -47,6 +47,10 @@ nav .left img {
   margin-left: 2rem;
 }
 
+nav .left:hover {
+  cursor: pointer;
+}
+
 nav .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,6 +109,7 @@ nav .right .menu:hover {
 
 nav.hidden .left {
   opacity: 0;
+  visibility: hidden;
 }
 
 .home .upperdisplay {
@@ -324,7 +329,7 @@ nav.hidden .left {
   width: 100vw;
   height: 100vh;
   background: #49006b;
-  background: linear-gradient(30deg, rgba(73, 0, 107, 0.98) 5%, rgba(102, 0, 135, 0.98) 24%, rgba(168, 127, 0, 0.98) 100%);
+  background: linear-gradient(30deg, #49006b 5%, #660087 24%, #a87f00 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,6 +380,11 @@ body {
   overflow-x: hidden;
 }
 
+body.stop-transitions * {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
 .content {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../img/background.png");
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/background.png");
@@ -394,5 +404,6 @@ body {
 section {
   height: 100vh;
   background-color: rgba(15, 15, 15, 0);
+  font-weight: 500;
 }
 /*# sourceMappingURL=styles.css.map */

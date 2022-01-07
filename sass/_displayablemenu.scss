@@ -11,9 +11,9 @@
 	background: rgb(73, 0, 107);
 	background: linear-gradient(
 		30deg,
-		rgba(73, 0, 107, 0.98) 5%,
-		rgba(102, 0, 135, 0.98) 24%,
-		rgba(168, 127, 0, 0.98) 100%
+		rgba(73, 0, 107, 1) 5%,
+		rgba(102, 0, 135, 1) 24%,
+		rgba(168, 127, 0, 1) 100%
 	);
 	&.hidden {
 		visibility: hidden;
