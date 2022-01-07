@@ -1,25 +1,31 @@
-// GLOBAL DEFINITIONS
+// ----- VARIABLES -----
+
+    // GLOBAL DEFINITIONS
 const content = document.querySelector(".content")
 const section = document.querySelectorAll("section")
 const nav = document.querySelector("nav")
 
-// LOCAL DEFINITIONS
+    // LOCAL DEFINITIONS
 const home = document.querySelector(".home")
 const aboutme = document.querySelector(".aboutme")
 const mywork = document.querySelector(".mywork")
 const contact = document.querySelector(".contact")
 
-// HYPERLOCAL DEFINITIONS
+const navMenu = document.querySelector("nav .right .menu")
+const displayableMenu = document.querySelector(".displayable-menu")
+
+    // HYPERLOCAL DEFINITIONS
 const titleimage = document.querySelector(".titleimage");
 const separator = document.querySelector(".separator");
 
-// WEB DISPLACEMENT VARIABLES
+    // WEB DISPLACEMENT VARIABLES
 let allowDisplacement = true
 let displaced = 0
-let currentSlide
+let currentSlide = 0
 
-// WEB DISPLACEMENT FUNCTIONS
-// This function, inside a TimeOut, enables the displacement to prevent fast sliding
+// ----- FUNCTIONS -----
+
+    // This function, inside a TimeOut, enables the displacement to prevent fast sliding
 function enableDisplacement() {
     allowDisplacement = true
 }
@@ -30,13 +36,14 @@ function activateHome() {
 }
 setTimeout(activateHome, 100)
 
-// This function updates the current displayed slide using the <<displaced>> variable
-function updatePosition() {
+// ACTIVATING ANY PAGE WHEN SLIDING
+function activateSlide() {
     section.forEach((section, id) => {
         section.classList.remove('active')
-        if (displaced*(-1)/100 == id) {
+        if (currentSlide == id) {
             console.log(id)
             section.classList.add('active')
+            id == 0 ? nav.classList.add('hidden') : nav.classList.remove('hidden')
         }
     });
 }
@@ -64,18 +71,23 @@ window.addEventListener("wheel", event => {
     // SLIDE DOWN
     if ((event.deltaY > 0)  && (lasttopPosition > 100) && (allowDisplacement)) { 
         allowDisplacement = false
-        content.style.transform = `translateY(${-100 + displaced}vh)`
+        content.style.transform = `translateY(${-100 - currentSlide*100}vh)`
+        currentSlide++
         setTimeout(enableDisplacement, 1000)
-        setTimeout(updatePosition, 500)
-        displaced -= 100
+        setTimeout(activateSlide, 500)
         
     // SLIDE UP
     } else if ((event.deltaY < 0) && (firsttopPosition < -100) && (allowDisplacement)) {
         allowDisplacement = false
-        content.style.transform = 'translateY(10vh)'
-        content.style.transform = `translateY(${100 + displaced}vh)`
+        content.style.transform = `translateY(${100 - currentSlide*100}vh)`
+        currentSlide--
         setTimeout(enableDisplacement, 1000)
-        setTimeout(updatePosition, 500)
-        displaced += 100
+        setTimeout(activateSlide, 500)
     }
+})
+
+// MENU CLICK EVENT LISTENER
+
+navMenu.addEventListener("click", event => {
+    displayableMenu.classList.toggle('hidden')
 })

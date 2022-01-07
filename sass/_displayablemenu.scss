@@ -1,0 +1,22 @@
+.displayable-menu {
+	z-index: 50;
+	position: absolute;
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgb(73, 0, 107);
+	background: linear-gradient(
+		30deg,
+		rgba(73, 0, 107, 0.98) 5%,
+		rgba(102, 0, 135, 0.98) 24%,
+		rgba(168, 127, 0, 0.98) 100%
+	);
+	&.hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
