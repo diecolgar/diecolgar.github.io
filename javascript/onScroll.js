@@ -16,8 +16,10 @@ const separator = document.querySelector(".separator");
 // WEB DISPLACEMENT VARIABLES
 let allowDisplacement = true
 let displaced = 0
+let currentSlide
 
 // WEB DISPLACEMENT FUNCTIONS
+// This function, inside a TimeOut, enables the displacement to prevent fast sliding
 function enableDisplacement() {
     allowDisplacement = true
 }
@@ -28,26 +30,15 @@ function activateHome() {
 }
 setTimeout(activateHome, 100)
 
+// This function updates the current displayed slide using the <<displaced>> variable
 function updatePosition() {
-    sectionHeight = home.offsetHeight
-    sectionPositionMid = -home.getBoundingClientRect().top + sectionHeight/2
-    console.log(sectionPositionMid)
-    console.log(sectionHeight)
-
-    breaker = true
     section.forEach((section, id) => {
         section.classList.remove('active')
-        if ((sectionPositionMid < sectionHeight*(id+1)) && breaker) {
+        if (displaced*(-1)/100 == id) {
+            console.log(id)
             section.classList.add('active')
-            breaker = false
         }
     });
-    if (home.classList.contains('active')) {
-        console.log('asjdhas')
-        nav.classList.add("active")
-    } else {
-        nav.classList.remove("active")
-    }
 }
 
 // SCREEN PARAMETERS
