@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap");
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -160,6 +160,7 @@ nav.hidden .left {
 .home .lowerdisplay h1 {
   margin-top: 10vh;
   font-size: 3vw;
+  font-weight: 500;
   margin-left: 3vw;
   background: -webkit-gradient(linear, left top, right top, from(#cf7145), to(#cd66d6));
   background: linear-gradient(to right, #cf7145 0%, #cd66d6 100%);
@@ -324,11 +325,38 @@ nav.hidden .left {
   height: 100vh;
   background: #49006b;
   background: linear-gradient(30deg, rgba(73, 0, 107, 0.98) 5%, rgba(102, 0, 135, 0.98) 24%, rgba(168, 127, 0, 0.98) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .displayable-menu.hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.displayable-menu .menu-button {
+  font-size: 10vh;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.displayable-menu .menu-button:hover {
+  cursor: pointer;
+  color: #cccbff;
 }
 
 * {

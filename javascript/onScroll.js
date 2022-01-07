@@ -4,6 +4,7 @@
 const content = document.querySelector(".content")
 const section = document.querySelectorAll("section")
 const nav = document.querySelector("nav")
+const menuItem = document.querySelectorAll(".menu-button")
 
     // LOCAL DEFINITIONS
 const home = document.querySelector(".home")
@@ -71,23 +72,35 @@ window.addEventListener("wheel", event => {
     // SLIDE DOWN
     if ((event.deltaY > 0)  && (lasttopPosition > 100) && (allowDisplacement)) { 
         allowDisplacement = false
-        content.style.transform = `translateY(${-100 - currentSlide*100}vh)`
         currentSlide++
+        content.style.transform = `translateY(${-currentSlide*100}vh)`
         setTimeout(enableDisplacement, 1000)
         setTimeout(activateSlide, 500)
         
     // SLIDE UP
     } else if ((event.deltaY < 0) && (firsttopPosition < -100) && (allowDisplacement)) {
         allowDisplacement = false
-        content.style.transform = `translateY(${100 - currentSlide*100}vh)`
         currentSlide--
+        content.style.transform = `translateY(${-currentSlide*100}vh)`
         setTimeout(enableDisplacement, 1000)
         setTimeout(activateSlide, 500)
     }
 })
 
-// MENU CLICK EVENT LISTENER
-
-navMenu.addEventListener("click", event => {
+// MENU DISPLAY EVENT LISTENER
+navMenu.addEventListener("click", () => {
     displayableMenu.classList.toggle('hidden')
 })
+
+// MENU ITEM CLICK EVENT LISTENER
+menuItem.forEach((menuItem, id) => {
+    menuItem.addEventListener("click", () => {
+        displayableMenu.classList.toggle('hidden')
+        currentSlide = id
+        content.style.transform = `translateY(${-currentSlide*100}vh)`
+        allowDisplacement = false
+        setTimeout(enableDisplacement, 1000)
+        setTimeout(activateSlide, 500)
+    })
+})
+
