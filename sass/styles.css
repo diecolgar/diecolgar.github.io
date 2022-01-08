@@ -229,10 +229,96 @@ nav.hidden .left {
   -webkit-transition: 0.8s;
   transition: 0.8s;
   position: relative;
-  top: 25vh;
-  left: 48vw;
+  top: 20vh;
+  left: 10vw;
   color: white;
   font-size: 7vw;
+}
+
+.aboutme .wire {
+  position: absolute;
+  top: -12vh;
+  left: 2vw;
+  width: 23vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  clip: rect(0, 2vw, 15vh, 0);
+}
+
+.aboutme .wire.colored {
+  clip: rect(0, 0, 0, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.aboutme .whoIam {
+  position: absolute;
+  top: 44vh;
+  left: 8vw;
+  width: 36vw;
+  -webkit-transform: translateX(-10vw);
+          transform: translateX(-10vw);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.aboutme .whoIam p {
+  font-size: 18%;
+  font-weight: 300;
+  position: absolute;
+}
+
+.aboutme .whoIam img {
+  width: 45%;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: -3%;
+}
+
+.aboutme .myPast {
+  position: absolute;
+  top: 59vh;
+  left: 9vw;
+  width: 36vw;
+  -webkit-transform: translateX(-20vw);
+          transform: translateX(-20vw);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.aboutme .myPast p {
+  font-size: 18%;
+  font-weight: 300;
+  position: absolute;
+}
+
+.aboutme .myPast img {
+  width: 42%;
+  position: absolute;
+  margin-top: 6%;
+}
+
+.aboutme .myStudy {
+  position: absolute;
+  top: 74vh;
+  left: 10vw;
+  width: 36vw;
+  -webkit-transform: translateX(-30vw);
+          transform: translateX(-30vw);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.aboutme .myStudy p {
+  font-size: 18%;
+  font-weight: 300;
+  position: absolute;
+}
+
+.aboutme .myStudy img {
+  width: 42%;
+  position: absolute;
+  margin-top: 6%;
 }
 
 .aboutme.active div {
@@ -241,33 +327,24 @@ nav.hidden .left {
   opacity: 1;
 }
 
-.aboutme.active img {
-  clip: rect(0, 45vw, 60vh, 0vh);
-  -webkit-transition: 2s;
-  transition: 2s;
+.aboutme.active .wire {
+  clip: rect(0, 50vw, 34vh, 0vh);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.aboutme.active img.second {
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+.aboutme.active .wire.colored {
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
   z-index: 10;
-  clip: rect(0, 45vw, 60vh, 0vh);
+  clip: rect(0, 50vw, 34vh, 0vh);
 }
 
-.aboutme img {
-  position: absolute;
-  top: -15vh;
-  left: 2vw;
-  width: 45vw;
-  -webkit-transition: 1s;
-  transition: 1s;
-  clip: rect(0, 4vw, 15vh, 0);
-}
-
-.aboutme img.second {
-  clip: rect(0, 0, 0, 0);
-  -webkit-transition: 1s;
-  transition: 1s;
+.aboutme.active .myPast,
+.aboutme.active .myStudy,
+.aboutme.active .whoIam {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .mywork {
@@ -283,8 +360,8 @@ nav.hidden .left {
 
 .mywork div {
   position: relative;
-  top: 20vh;
-  left: 15vw;
+  top: 15vh;
+  left: 10vw;
   color: white;
   font-size: 7vw;
 }
@@ -308,8 +385,8 @@ nav.hidden .left {
 
 .contact div {
   position: relative;
-  top: 70vh;
-  left: 50vw;
+  top: 15vh;
+  left: 10vw;
   color: white;
   font-size: 7vw;
 }
@@ -415,6 +492,11 @@ nav.hidden .left {
 * {
   padding: 0;
   margin: 0;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html {

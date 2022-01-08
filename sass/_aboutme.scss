@@ -1,44 +1,106 @@
 .aboutme {
 	display: flex;
 	position: relative;
+
 	div {
 		transform: translateY(-20vh);
 		opacity: 0;
 		transition: 0.8s;
 		position: relative;
-		top: 25vh;
-		left: 48vw;
+		top: 20vh;
+		left: 10vw;
 		color: white;
 		font-size: 7vw;
-		// text-transform: uppercase;
 	}
+
+	.wire {
+		position: absolute;
+		top: -12vh;
+		left: 2vw;
+		width: 23vw;
+		transition: 0.5s;
+		clip: rect(0, 2vw, 15vh, 0);
+		// background-color: rgba(187, 187, 238, 0.397);
+		&.colored {
+			clip: rect(0, 0, 0, 0);
+			transition: 0.5s;
+		}
+	}
+
+	.whoIam {
+		position: absolute;
+		top: 44vh;
+		left: 8vw;
+		width: 36vw;
+		transform: translateX(-10vw);
+		transition: 0.8s;
+		p {
+			font-size: 18%;
+			font-weight: 300;
+			position: absolute;
+		}
+		img {
+			width: 45%;
+			position: absolute;
+			margin-top: 5%;
+			margin-left: -3%;
+		}
+	}
+	.myPast {
+		position: absolute;
+		top: 59vh;
+		left: 9vw;
+		width: 36vw;
+		transform: translateX(-20vw);
+		transition: 1s;
+		p {
+			font-size: 18%;
+			font-weight: 300;
+			position: absolute;
+		}
+		img {
+			width: 42%;
+			position: absolute;
+			margin-top: 6%;
+		}
+	}
+	.myStudy {
+		position: absolute;
+		top: 74vh;
+		left: 10vw;
+		width: 36vw;
+		transform: translateX(-30vw);
+		transition: 1.2s;
+		p {
+			font-size: 18%;
+			font-weight: 300;
+			position: absolute;
+		}
+		img {
+			width: 42%;
+			position: absolute;
+			margin-top: 6%;
+		}
+	}
+
 	&.active {
 		div {
 			transform: translateY(0);
 			opacity: 1;
 		}
-		img {
-			clip: rect(0, 45vw, 60vh, 0vh);
-			transition: 2s;
-			&.second {
-				transition: 2.5s;
+		.wire {
+			clip: rect(0, 50vw, 34vh, 0vh);
+			transition: 1s;
+			&.colored {
+				transition: 1.2s;
 				z-index: 10;
-				clip: rect(0, 45vw, 60vh, 0vh);
+				clip: rect(0, 50vw, 34vh, 0vh);
 			}
 		}
-	}
-
-	img {
-		position: absolute;
-		top: -15vh;
-		left: 2vw;
-		width: 45vw;
-		// height: 60vh;
-		transition: 1s;
-		clip: rect(0, 4vw, 15vh, 0);
-		&.second {
-			clip: rect(0, 0, 0, 0);
-			transition: 1s;
+		.myPast,
+		.myStudy,
+		.whoIam {
+			transition-delay: 0.5s;
 		}
 	}
 }
