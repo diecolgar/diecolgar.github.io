@@ -1,12 +1,12 @@
 // ---------- VARIABLES ---------- //
 
-    // GLOBAL DEFINITIONS
+// GLOBAL DEFINITIONS
 const content = document.querySelector(".content")
 const section = document.querySelectorAll("section")
 const nav = document.querySelector("nav")
 const menuItem = document.querySelectorAll(".menu-button")
 
-    // LOCAL DEFINITIONS
+// LOCAL DEFINITIONS
 const home = document.querySelector(".home")
 const aboutme = document.querySelector(".aboutme")
 const mywork = document.querySelector(".mywork")
@@ -16,11 +16,11 @@ const navBrand = document.querySelector("nav .left")
 const navMenu = document.querySelector("nav .right .menu")
 const displayableMenu = document.querySelector(".displayable-menu")
 
-    // HYPERLOCAL DEFINITIONS
+// HYPERLOCAL DEFINITIONS
 const titleimage = document.querySelector(".titleimage");
 const separator = document.querySelector(".separator");
 
-    // WEB DISPLACEMENT VARIABLES
+// WEB DISPLACEMENT VARIABLES
 let allowDisplacement = true
 let displaced = 0
 let currentSlide = 0
@@ -52,9 +52,17 @@ function activateSlide() {
 
 // MOVING SLIDES
 function moveSlide() {
-    content.style.transform = `translateY(${-currentSlide*100}vh)`
+    allowDisplacement = false
+    content.style.transform = `translateY(${-currentSlide * 100}vh)`
     setTimeout(enableDisplacement, 1000)
     setTimeout(activateSlide, 500)
+}
+
+// HANDLE MENU
+function menuHandler() {
+    displayableMenu.classList.toggle('hidden')
+    displayableMenu.classList.contains('hidden') ? allowDisplacement = true : allowDisplacement = false;
+    navMenu.classList.toggle('closed')
 }
 
 
@@ -65,10 +73,10 @@ let screen_width = screen.width
 // THIS WEB PAGE BEHAVIOUR IS ESSENTIALLY DIFFERENT FOR MOBILE (SLIDING) AND COMPUTER (MOUSEWHEEL/TOUCHPAD) DEVICES
 // DUE TO THE INEFFICIENT SNAP SCROLLING THAT CSS PROVIDES FOR PC AND MY DESIRE OF DEVELOPING MYSELF THE SLIDING EFFECT
 // INSTEAD OF USING LIBRARIES
-window.addEventListener("resize", function(event) {
-    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+window.addEventListener("resize", function (event) {
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
 
-    if (document.body.clientWidth < 800) { allowDisplacement = false} else { allowDisplacement = true }
+    if (document.body.clientWidth < 800) { allowDisplacement = false } else { allowDisplacement = true }
 })
 
 // MOUSE WHEEL EVENT LISTENER
@@ -76,30 +84,31 @@ window.addEventListener("wheel", event => {
 
     firsttopPosition = home.getBoundingClientRect().top
     lasttopPosition = contact.getBoundingClientRect().top
-    
+
     // SLIDE DOWN
-    if ((event.deltaY > 0)  && (lasttopPosition > 100) && (allowDisplacement)) { 
-        allowDisplacement = false
+    if ((event.deltaY > 0) && (lasttopPosition > 100) && (allowDisplacement)) {
         currentSlide++
         moveSlide()
-        
-    // SLIDE UP
+
+        // SLIDE UP
     } else if ((event.deltaY < 0) && (firsttopPosition < -100) && (allowDisplacement)) {
-        allowDisplacement = false
         currentSlide--
         moveSlide()
     }
 })
 
+
+// --------- EVENTS IN THE MENU -------- //
+
 // MENU DISPLAY EVENT LISTENER
 navMenu.addEventListener("click", () => {
-    displayableMenu.classList.toggle('hidden')
+    menuHandler()
 })
 
 // MENU ITEM CLICK EVENT LISTENER
 menuItem.forEach((menuItem, id) => {
     menuItem.addEventListener("click", () => {
-        displayableMenu.classList.toggle('hidden')
+        menuHandler()
         currentSlide = id
         moveSlide()
     })
@@ -109,5 +118,8 @@ menuItem.forEach((menuItem, id) => {
 navBrand.addEventListener("click", () => {
     currentSlide = 0
     moveSlide()
+    if (!displayableMenu.classList.contains('hidden')) {
+        menuHandler()
+    }
 })
 

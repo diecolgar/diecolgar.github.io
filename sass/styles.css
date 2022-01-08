@@ -70,6 +70,7 @@ nav .right img {
 
 nav .right img:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 nav .right .menu {
@@ -91,6 +92,8 @@ nav .right .menu {
 nav .right .menu .line {
   position: absolute;
   background-color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
   width: 35px;
   height: 3px;
 }
@@ -105,6 +108,20 @@ nav .right .menu .line.lower {
 
 nav .right .menu:hover {
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav .right .menu.closed .line.upper {
+  top: 37.5%;
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+nav .right .menu.closed .line.lower {
+  top: 37.5%;
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
 }
 
 nav.hidden .left {
@@ -202,14 +219,15 @@ nav.hidden .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.aboutme div {
   -webkit-transform: translateY(-20vh);
           transform: translateY(-20vh);
   opacity: 0;
   -webkit-transition: 0.8s;
   transition: 0.8s;
-}
-
-.aboutme div {
   position: relative;
   top: 25vh;
   left: 48vw;
@@ -217,10 +235,39 @@ nav.hidden .left {
   font-size: 7vw;
 }
 
-.aboutme.active {
+.aboutme.active div {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+
+.aboutme.active img {
+  clip: rect(0, 45vw, 60vh, 0vh);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.aboutme.active img.second {
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  z-index: 10;
+  clip: rect(0, 45vw, 60vh, 0vh);
+}
+
+.aboutme img {
+  position: absolute;
+  top: -15vh;
+  left: 2vw;
+  width: 45vw;
+  -webkit-transition: 1s;
+  transition: 1s;
+  clip: rect(0, 4vw, 15vh, 0);
+}
+
+.aboutme img.second {
+  clip: rect(0, 0, 0, 0);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .mywork {
@@ -328,6 +375,7 @@ nav.hidden .left {
   left: 0;
   width: 100vw;
   height: 100vh;
+  color: black;
   background: #49006b;
   background: linear-gradient(30deg, #49006b 5%, #660087 24%, #a87f00 100%);
   display: -webkit-box;
@@ -355,13 +403,13 @@ nav.hidden .left {
   font-weight: 500;
   text-transform: uppercase;
   margin: 1rem 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
 
 .displayable-menu .menu-button:hover {
   cursor: pointer;
-  color: #cccbff;
+  color: #fafafa;
 }
 
 * {

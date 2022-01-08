@@ -28,6 +28,7 @@ nav {
 			margin: 0 0.5rem;
 			&:hover {
 				cursor: pointer;
+				opacity: 0.6;
 			}
 		}
 		.menu {
@@ -41,6 +42,7 @@ nav {
 			.line {
 				position: absolute;
 				background-color: white;
+				transition: 1s;
 				width: 35px;
 				height: 3px;
 				&.upper {
@@ -52,6 +54,21 @@ nav {
 			}
 			&:hover {
 				cursor: pointer;
+				transition: 0.5s;
+			}
+			&.closed {
+				.line {
+					&.upper {
+						top: 37.5%;
+						// transform: rotate(225deg);
+						transform: rotate(405deg);
+					}
+					&.lower {
+						top: 37.5%;
+						// transform: rotate(135deg);
+						transform: rotate(315deg);
+					}
+				}
 			}
 		}
 	}
