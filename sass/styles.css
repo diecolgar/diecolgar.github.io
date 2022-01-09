@@ -247,12 +247,6 @@ nav.hidden .left {
   clip: rect(0, 0, 100vh, 0);
 }
 
-.aboutme .wire.colored {
-  clip: rect(0, 0, 100vh, 0);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .aboutme .aboutitem {
   position: absolute;
   display: -webkit-box;
@@ -264,17 +258,21 @@ nav.hidden .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2.2vh;
-  font-weight: 300;
+  font-size: 2vh;
+  font-weight: 400;
 }
 
 .aboutme .aboutitem.origin {
+  -webkit-transform: translateX(-10vw);
+          transform: translateX(-10vw);
   width: 15vw;
   top: 44vh;
   left: 15.5vw;
 }
 
 .aboutme .aboutitem.age {
+  -webkit-transform: translateX(-20vw);
+          transform: translateX(-20vw);
   width: 12vw;
   top: 52vh;
   left: 18vw;
@@ -285,7 +283,9 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitem.study {
-  width: 19.5vw;
+  -webkit-transform: translateX(-30vw);
+          transform: translateX(-30vw);
+  width: 19vw;
   top: 60vh;
   left: 18.3vw;
 }
@@ -295,9 +295,15 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitem.experience {
-  width: 19vw;
+  -webkit-transform: translateX(-40vw);
+          transform: translateX(-40vw);
+  width: 17vw;
   top: 68vh;
-  left: 17.3vw;
+  left: 19vw;
+}
+
+.aboutme .aboutitem.experience .left {
+  margin-top: 2vh;
 }
 
 .aboutme .aboutitem.experience .right {
@@ -305,9 +311,11 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitem.as {
+  -webkit-transform: translateX(-40vw);
+          transform: translateX(-40vw);
   width: 19vw;
   top: 72.8vh;
-  left: 23vw;
+  left: 24vw;
   font-size: 1.8vh;
 }
 
@@ -319,21 +327,13 @@ nav.hidden .left {
 
 .aboutme.active .wire {
   clip: rect(0, 100vw, 100vh, 0vh);
-  -webkit-transition: 5s;
-  transition: 5s;
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
-.aboutme.active .wire.colored {
-  -webkit-transition: 7s;
-  transition: 7s;
-  clip: rect(0, 100vw, 100vh, 0vh);
-}
-
-.aboutme.active .myPast,
-.aboutme.active .myStudy,
-.aboutme.active .whoIam {
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+.aboutme.active .aboutitem {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .mywork {
