@@ -232,93 +232,83 @@ nav.hidden .left {
   top: 20vh;
   left: 10vw;
   color: white;
-  font-size: 7vw;
+  font-size: 12vh;
+  z-index: 10;
 }
 
 .aboutme .wire {
   position: absolute;
-  top: -12vh;
-  left: 2vw;
-  width: 23vw;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  clip: rect(0, 2vw, 15vh, 0);
+  clip: rect(0, 0, 100vh, 0);
 }
 
 .aboutme .wire.colored {
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0, 0, 100vh, 0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.aboutme .whoIam {
+.aboutme .aboutitem {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.2vh;
+  font-weight: 300;
+}
+
+.aboutme .aboutitem.origin {
+  width: 15vw;
   top: 44vh;
-  left: 8vw;
-  width: 36vw;
-  -webkit-transform: translateX(-10vw);
-          transform: translateX(-10vw);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  left: 15.5vw;
 }
 
-.aboutme .whoIam p {
-  font-size: 18%;
-  font-weight: 300;
-  position: absolute;
+.aboutme .aboutitem.age {
+  width: 12vw;
+  top: 52vh;
+  left: 18vw;
 }
 
-.aboutme .whoIam img {
-  width: 45%;
-  position: absolute;
-  margin-top: 5%;
-  margin-left: -3%;
+.aboutme .aboutitem.age .left {
+  font-size: 2.7vh;
 }
 
-.aboutme .myPast {
-  position: absolute;
-  top: 59vh;
-  left: 9vw;
-  width: 36vw;
-  -webkit-transform: translateX(-20vw);
-          transform: translateX(-20vw);
-  -webkit-transition: 1s;
-  transition: 1s;
+.aboutme .aboutitem.study {
+  width: 19.5vw;
+  top: 60vh;
+  left: 18.3vw;
 }
 
-.aboutme .myPast p {
-  font-size: 18%;
-  font-weight: 300;
-  position: absolute;
+.aboutme .aboutitem.study .left {
+  height: 5vh;
 }
 
-.aboutme .myPast img {
-  width: 42%;
-  position: absolute;
-  margin-top: 6%;
+.aboutme .aboutitem.experience {
+  width: 19vw;
+  top: 68vh;
+  left: 17.3vw;
 }
 
-.aboutme .myStudy {
-  position: absolute;
-  top: 74vh;
-  left: 10vw;
-  width: 36vw;
-  -webkit-transform: translateX(-30vw);
-          transform: translateX(-30vw);
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+.aboutme .aboutitem.experience .right {
+  height: 6.5vh;
 }
 
-.aboutme .myStudy p {
-  font-size: 18%;
-  font-weight: 300;
-  position: absolute;
-}
-
-.aboutme .myStudy img {
-  width: 42%;
-  position: absolute;
-  margin-top: 6%;
+.aboutme .aboutitem.as {
+  width: 19vw;
+  top: 72.8vh;
+  left: 23vw;
+  font-size: 1.8vh;
 }
 
 .aboutme.active div {
@@ -328,16 +318,15 @@ nav.hidden .left {
 }
 
 .aboutme.active .wire {
-  clip: rect(0, 50vw, 34vh, 0vh);
-  -webkit-transition: 1s;
-  transition: 1s;
+  clip: rect(0, 100vw, 100vh, 0vh);
+  -webkit-transition: 5s;
+  transition: 5s;
 }
 
 .aboutme.active .wire.colored {
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
-  z-index: 10;
-  clip: rect(0, 50vw, 34vh, 0vh);
+  -webkit-transition: 7s;
+  transition: 7s;
+  clip: rect(0, 100vw, 100vh, 0vh);
 }
 
 .aboutme.active .myPast,
@@ -535,5 +524,9 @@ section {
   height: 100vh;
   background-color: rgba(15, 15, 15, 0);
   font-weight: 500;
+}
+
+section .title {
+  height: 15vh;
 }
 /*# sourceMappingURL=styles.css.map */
