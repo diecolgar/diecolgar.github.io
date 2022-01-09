@@ -22,7 +22,8 @@
 		width: 100vw;
 		height: 100vh;
 		transition: 0.5s;
-		clip: rect(0, 0, 100vh, 0);
+		clip: rect(0, 4.4vw, 100vh, 0);
+		// background-color: rgba(187, 10, 10, 0.356);
 	}
 
 	.aboutitem {
@@ -34,46 +35,39 @@
 		font-weight: 400;
 		&.origin {
 			transform: translateX(-10vw);
-			width: 15vw;
+			width: 16vw;
 			top: 44vh;
-			left: 15.5vw;
+			left: 16vw;
+			.left {
+				height: 5vh;
+			}
 		}
 		&.age {
 			transform: translateX(-20vw);
-			width: 12vw;
+			width: 16vw;
 			top: 52vh;
-			left: 18vw;
+			left: 16.5vw;
 			.left {
-				font-size: 2.7vh;
+				height: 5vh;
 			}
 		}
 		&.study {
 			transform: translateX(-30vw);
-			width: 19vw;
+			width: 20vw;
 			top: 60vh;
-			left: 18.3vw;
+			left: 17.5vw;
 			.left {
 				height: 5vh;
 			}
 		}
 		&.experience {
-			transform: translateX(-40vw);
-			width: 17vw;
+			transform: translateX(-30vw);
+			width: 26vw;
 			top: 68vh;
-			left: 19vw;
+			left: 18.5vw;
 			.left {
-				margin-top: 2vh;
+				height: 5vh;
 			}
-			.right {
-				height: 6.5vh;
-			}
-		}
-		&.as {
-			transform: translateX(-40vw);
-			width: 19vw;
-			top: 72.8vh;
-			left: 24vw;
-			font-size: 1.8vh;
 		}
 	}
 
@@ -83,9 +77,12 @@
 			opacity: 1;
 		}
 		.wire {
-			clip: rect(0, 70vw, 100vh, 0vh);
-			transition: 1s;
-			transition-timing-function: cubic-bezier(0.26, 0.53, 0.68, 0);
+			clip: rect(0, 100vw, 100vh, 0vh);
+			transition: 2s;
+			// transition-timing-function: cubic-bezier(0.26, 0.53, 0.68, 0);
+			// transition-timing-function: cubic-bezier(0.57, 0.62, 0.48, 0.07);
+			// transition-timing-function: cubic-bezier(0.52, 0.42, 0.52, 0);
+			transition-timing-function: ease-in-out;
 		}
 		.aboutitem {
 			transform: translateX(0);

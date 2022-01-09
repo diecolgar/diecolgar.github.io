@@ -41,6 +41,15 @@
 			-webkit-text-fill-color: transparent;
 		}
 	}
+	.wire {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		transition: 0.5s;
+		// clip: rect(0, 0, 100vh, 0);
+	}
 	&.active {
 		.upperdisplay {
 			.DC {
