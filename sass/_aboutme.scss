@@ -23,7 +23,6 @@
 		height: 100vh;
 		transition: 0.5s;
 		clip: rect(0, 0, 100vh, 0);
-		// background-color: rgba(112, 112, 248, 0.363);
 	}
 
 	.aboutitem {
@@ -84,8 +83,9 @@
 			opacity: 1;
 		}
 		.wire {
-			clip: rect(0, 100vw, 100vh, 0vh);
-			transition: 3s;
+			clip: rect(0, 70vw, 100vh, 0vh);
+			transition: 1s;
+			transition-timing-function: cubic-bezier(0.26, 0.53, 0.68, 0);
 		}
 		.aboutitem {
 			transform: translateX(0);
