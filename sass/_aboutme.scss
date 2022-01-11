@@ -2,7 +2,7 @@
 	display: flex;
 	position: relative;
 
-	div {
+	.title {
 		transform: translateY(-20vh);
 		opacity: 0;
 		transition: 0.8s;
@@ -26,47 +26,74 @@
 		// background-color: rgba(187, 10, 10, 0.356);
 	}
 
-	.aboutitem {
+	.aboutitems {
 		position: absolute;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		font-size: 2vh;
-		font-weight: 400;
-		&.origin {
-			transform: translateX(-10vw);
-			width: 16vw;
-			top: 44vh;
-			left: 16vw;
-			.left {
-				height: 5vh;
+		top: 38vh;
+		left: 10vw;
+		width: 40vw;
+		height: 40vh;
+		color: white;
+		.item {
+			position: relative;
+			display: flex;
+			align-items: center;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 25%;
+			display: flex;
+			transition: 1s;
+			opacity: 0;
+			&.origin {
+				transform: translateX(-10vw);
+				.left {
+					height: 50%;
+					margin-left: 8vw;
+				}
 			}
-		}
-		&.age {
-			transform: translateX(-20vw);
-			width: 16vw;
-			top: 52vh;
-			left: 16.5vw;
-			.left {
-				height: 5vh;
+			&.age {
+				transform: translateX(-20vw);
+				.left {
+					height: 50%;
+					margin-left: 9vw;
+				}
 			}
-		}
-		&.study {
-			transform: translateX(-30vw);
-			width: 20vw;
-			top: 60vh;
-			left: 17.5vw;
-			.left {
-				height: 5vh;
+			&.studies {
+				transform: translateX(-30vw);
+				.left {
+					height: 40%;
+					margin-left: 11vw;
+				}
+				.downer {
+					font-size: 0.7vw;
+					margin-left: 3.2vw;
+					font-weight: 300;
+				}
 			}
-		}
-		&.experience {
-			transform: translateX(-30vw);
-			width: 26vw;
-			top: 68vh;
-			left: 18.5vw;
-			.left {
-				height: 5vh;
+			&.work {
+				transform: translateX(-40vw);
+				.left {
+					height: 40%;
+					margin-left: 13vw;
+				}
+				.downer {
+					font-size: 0.7vw;
+					margin-left: 2.1vw;
+					font-weight: 300;
+				}
+			}
+			.right {
+				margin-left: 2.5vw;
+				display: flex;
+				flex-direction: column;
+				.up {
+					font-size: 1vw;
+				}
+				.down {
+					font-size: 0.7vw;
+					margin-left: 2.3vw;
+					font-weight: 300;
+				}
 			}
 		}
 	}
@@ -84,8 +111,11 @@
 			// transition-timing-function: cubic-bezier(0.52, 0.42, 0.52, 0);
 			transition-timing-function: ease-in-out;
 		}
-		.aboutitem {
-			transform: translateX(0);
+		.aboutitems {
+			.item {
+				transform: translateX(0);
+				opacity: 1;
+			}
 		}
 	}
 }

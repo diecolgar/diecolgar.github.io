@@ -1,72 +1,83 @@
 .home {
-	.upperdisplay {
+	.DC {
 		position: absolute;
-		top: 37vh;
-		left: 10vw;
-		width: 45vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		.DC {
-			opacity: 0;
-			width: 40%;
-			transform: translateY(-30vh);
-		}
-		.diegocolino {
-			margin-left: 3vw;
-			opacity: 0;
-			width: 50%;
-			transform: translateY(-20vh);
-		}
+		top: 36vh;
+		left: 14vw;
+		width: 20vw;
+		opacity: 0;
+		transform: translateY(-30vh);
 	}
-	.lowerdisplay {
+	.diegocolino {
 		position: absolute;
-		top: 35vh;
-		left: 53vw;
-		width: 40vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		top: 39vh;
+		left: 39vw;
+		width: 20vw;
+		font-size: 12vh;
+		font-weight: 400;
+		font-family: 'Jost', sans-serif;
+		opacity: 0;
+		transform: translateY(-20vh);
+		color: white;
+	}
+	.softwaredeveloper {
+		position: absolute;
+		top: 47vh;
+		left: 63vw;
+		width: 30vw;
+		font-size: 6vh;
+		font-weight: 500;
 		opacity: 0;
 		transform: translateX(20vw);
-		h1 {
-			margin-top: 10vh;
-			font-size: 3vw;
-			font-weight: 500;
-			margin-left: 3vw;
-			// color: rgb(238, 169, 255);
-			background: linear-gradient(to right, #cf7145 0%, #cd66d6 100%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
+		background: linear-gradient(to right, #cf7145 0%, #cd66d6 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 	.wire {
 		position: absolute;
-		top: 0;
+		top: 100vh;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
-		transition: 0.5s;
-		// clip: rect(0, 0, 100vh, 0);
+		// height: 80vh;
+		height: 0vh;
+		transition: 1s;
+	}
+	.scrolldown {
+		color: white;
+		position: absolute;
+		top: 78vh;
+		left: 1vw;
+		opacity: 0;
+		transform: rotate(-90deg) translateX(30vh);
+		letter-spacing: 2px;
 	}
 	&.active {
-		.upperdisplay {
-			.DC {
-				opacity: 1;
-				transform: translateY(0);
-				transition: 0.8s;
-			}
-			.diegocolino {
-				opacity: 1;
-				transform: translateY(0);
-				transition: 0.8s;
-			}
+		.DC {
+			opacity: 1;
+			transform: translateY(0);
+			transition: 0.8s;
 		}
-		.lowerdisplay {
+		.diegocolino {
+			opacity: 1;
+			transform: translateY(0);
+			transition: 1s;
+		}
+		.softwaredeveloper {
 			opacity: 1;
 			transform: translateX(0);
-			transition: 1.1s;
+			transition: 1.4s;
+		}
+		.wire {
+			top: 20vh;
+			height: 80vh;
+			transition: 1s;
+			transition-delay: 0.5s;
+		}
+		.scrolldown {
+			transform: translateX(0) rotate(-90deg);
+			opacity: 1;
+			transition: 1s;
+			transition-delay: 1s;
 		}
 	}
 }

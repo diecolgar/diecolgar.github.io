@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Ubuntu:wght@300;400&display=swap");
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -44,7 +44,11 @@ nav .left {
 
 nav .left img {
   height: 3rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
+}
+
+nav .left img.Diego {
+  height: 2.6rem;
 }
 
 nav .left:hover {
@@ -129,61 +133,40 @@ nav.hidden .left {
   visibility: hidden;
 }
 
-.home .upperdisplay {
+.home .DC {
   position: absolute;
-  top: 37vh;
-  left: 10vw;
-  width: 45vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.home .upperdisplay .DC {
+  top: 36vh;
+  left: 14vw;
+  width: 20vw;
   opacity: 0;
-  width: 40%;
   -webkit-transform: translateY(-30vh);
           transform: translateY(-30vh);
 }
 
-.home .upperdisplay .diegocolino {
-  margin-left: 3vw;
+.home .diegocolino {
+  position: absolute;
+  top: 39vh;
+  left: 39vw;
+  width: 20vw;
+  font-size: 12vh;
+  font-weight: 400;
+  font-family: 'Jost', sans-serif;
   opacity: 0;
-  width: 50%;
   -webkit-transform: translateY(-20vh);
           transform: translateY(-20vh);
+  color: white;
 }
 
-.home .lowerdisplay {
+.home .softwaredeveloper {
   position: absolute;
-  top: 35vh;
-  left: 53vw;
-  width: 40vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  top: 47vh;
+  left: 63vw;
+  width: 30vw;
+  font-size: 6vh;
+  font-weight: 500;
   opacity: 0;
   -webkit-transform: translateX(20vw);
           transform: translateX(20vw);
-}
-
-.home .lowerdisplay h1 {
-  margin-top: 10vh;
-  font-size: 3vw;
-  font-weight: 500;
-  margin-left: 3vw;
   background: -webkit-gradient(linear, left top, right top, from(#cf7145), to(#cd66d6));
   background: linear-gradient(to right, #cf7145 0%, #cd66d6 100%);
   background-clip: text;
@@ -193,15 +176,26 @@ nav.hidden .left {
 
 .home .wire {
   position: absolute;
-  top: 0;
+  top: 100vh;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  height: 0vh;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.home.active .upperdisplay .DC {
+.home .scrolldown {
+  color: white;
+  position: absolute;
+  top: 78vh;
+  left: 1vw;
+  opacity: 0;
+  -webkit-transform: rotate(-90deg) translateX(30vh);
+          transform: rotate(-90deg) translateX(30vh);
+  letter-spacing: 2px;
+}
+
+.home.active .DC {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -209,20 +203,39 @@ nav.hidden .left {
   transition: 0.8s;
 }
 
-.home.active .upperdisplay .diegocolino {
+.home.active .diegocolino {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.home.active .lowerdisplay {
+.home.active .softwaredeveloper {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: 1.1s;
-  transition: 1.1s;
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+}
+
+.home.active .wire {
+  top: 20vh;
+  height: 80vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.home.active .scrolldown {
+  -webkit-transform: translateX(0) rotate(-90deg);
+          transform: translateX(0) rotate(-90deg);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .aboutme {
@@ -232,7 +245,7 @@ nav.hidden .left {
   position: relative;
 }
 
-.aboutme div {
+.aboutme .title {
   -webkit-transform: translateY(-20vh);
           transform: translateY(-20vh);
   opacity: 0;
@@ -257,67 +270,104 @@ nav.hidden .left {
   clip: rect(0, 4.4vw, 100vh, 0);
 }
 
-.aboutme .aboutitem {
+.aboutme .aboutitems {
   position: absolute;
+  top: 38vh;
+  left: 10vw;
+  width: 40vw;
+  height: 40vh;
+  color: white;
+}
+
+.aboutme .aboutitems .item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2vh;
-  font-weight: 400;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
 }
 
-.aboutme .aboutitem.origin {
+.aboutme .aboutitems .item.origin {
   -webkit-transform: translateX(-10vw);
           transform: translateX(-10vw);
-  width: 16vw;
-  top: 44vh;
-  left: 16vw;
 }
 
-.aboutme .aboutitem.origin .left {
-  height: 5vh;
+.aboutme .aboutitems .item.origin .left {
+  height: 50%;
+  margin-left: 8vw;
 }
 
-.aboutme .aboutitem.age {
+.aboutme .aboutitems .item.age {
   -webkit-transform: translateX(-20vw);
           transform: translateX(-20vw);
-  width: 16vw;
-  top: 52vh;
-  left: 16.5vw;
 }
 
-.aboutme .aboutitem.age .left {
-  height: 5vh;
+.aboutme .aboutitems .item.age .left {
+  height: 50%;
+  margin-left: 9vw;
 }
 
-.aboutme .aboutitem.study {
+.aboutme .aboutitems .item.studies {
   -webkit-transform: translateX(-30vw);
           transform: translateX(-30vw);
-  width: 20vw;
-  top: 60vh;
-  left: 17.5vw;
 }
 
-.aboutme .aboutitem.study .left {
-  height: 5vh;
+.aboutme .aboutitems .item.studies .left {
+  height: 40%;
+  margin-left: 11vw;
 }
 
-.aboutme .aboutitem.experience {
-  -webkit-transform: translateX(-30vw);
-          transform: translateX(-30vw);
-  width: 26vw;
-  top: 68vh;
-  left: 18.5vw;
+.aboutme .aboutitems .item.studies .downer {
+  font-size: 0.7vw;
+  margin-left: 3.2vw;
+  font-weight: 300;
 }
 
-.aboutme .aboutitem.experience .left {
-  height: 5vh;
+.aboutme .aboutitems .item.work {
+  -webkit-transform: translateX(-40vw);
+          transform: translateX(-40vw);
+}
+
+.aboutme .aboutitems .item.work .left {
+  height: 40%;
+  margin-left: 13vw;
+}
+
+.aboutme .aboutitems .item.work .downer {
+  font-size: 0.7vw;
+  margin-left: 2.1vw;
+  font-weight: 300;
+}
+
+.aboutme .aboutitems .item .right {
+  margin-left: 2.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutme .aboutitems .item .right .up {
+  font-size: 1vw;
+}
+
+.aboutme .aboutitems .item .right .down {
+  font-size: 0.7vw;
+  margin-left: 2.3vw;
+  font-weight: 300;
 }
 
 .aboutme.active div {
@@ -334,9 +384,10 @@ nav.hidden .left {
           transition-timing-function: ease-in-out;
 }
 
-.aboutme.active .aboutitem {
+.aboutme.active .aboutitems .item {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  opacity: 1;
 }
 
 .mywork {

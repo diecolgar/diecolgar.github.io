@@ -13,7 +13,10 @@ nav {
 		transition: 0.3s;
 		img {
 			height: 3rem;
-			margin-left: 2rem;
+			margin-left: 1.5rem;
+			&.Diego {
+				height: 2.6rem;
+			}
 		}
 		&:hover {
 			cursor: pointer;
