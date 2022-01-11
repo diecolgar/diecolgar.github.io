@@ -29,7 +29,7 @@
 	.aboutitems {
 		position: absolute;
 		top: 38vh;
-		left: 10vw;
+		left: 9.5vw;
 		width: 40vw;
 		height: 40vh;
 		color: white;
@@ -40,33 +40,44 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 25%;
+			height: 33%;
 			display: flex;
 			transition: 1s;
 			opacity: 0;
+			.right {
+				margin-left: 2.5vw;
+				display: flex;
+				flex-direction: column;
+				.up {
+					font-size: 1.1vw;
+				}
+				.down {
+					font-size: 0.9vw;
+					margin-left: 1.5vw;
+					font-weight: 300;
+				}
+			}
 			&.origin {
 				transform: translateX(-10vw);
 				.left {
 					height: 50%;
 					margin-left: 8vw;
 				}
-			}
-			&.age {
-				transform: translateX(-20vw);
-				.left {
-					height: 50%;
-					margin-left: 9vw;
+				.downer {
+					font-size: 0.9vw;
+					margin-left: 1.9vw;
+					font-weight: 300;
 				}
 			}
 			&.studies {
 				transform: translateX(-30vw);
 				.left {
-					height: 40%;
-					margin-left: 11vw;
+					height: 35%;
+					margin-left: 9.5vw;
 				}
 				.downer {
-					font-size: 0.7vw;
-					margin-left: 3.2vw;
+					font-size: 0.9vw;
+					margin-left: 2.6vw;
 					font-weight: 300;
 				}
 			}
@@ -74,25 +85,58 @@
 				transform: translateX(-40vw);
 				.left {
 					height: 40%;
-					margin-left: 13vw;
+					margin-left: 12vw;
 				}
 				.downer {
-					font-size: 0.7vw;
-					margin-left: 2.1vw;
+					font-size: 0.9vw;
+					margin-left: 1.7vw;
 					font-weight: 300;
 				}
 			}
-			.right {
-				margin-left: 2.5vw;
+		}
+	}
+
+	.skillsitems {
+		position: absolute;
+		top: 52vh;
+		left: 66vw;
+		width: 30vw;
+		height: 50vh;
+		color: white;
+		.title {
+			position: relative;
+			top: 0;
+			left: 4vw;
+			font-size: 1.6vw;
+			height: 7vh;
+			transition: 1s;
+			transform: translateX(20vw);
+			opacity: 0;
+		}
+		.itemwrapper {
+			display: grid;
+			width: 25vw;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-gap: 1vw;
+			.item {
 				display: flex;
 				flex-direction: column;
-				.up {
-					font-size: 1vw;
-				}
-				.down {
-					font-size: 0.7vw;
-					margin-left: 2.3vw;
-					font-weight: 300;
+				font-weight: 300;
+				align-items: center;
+				font-size: 0.7vw;
+				background-color: rgba(14, 14, 14, 0);
+				color: rgb(255, 255, 255);
+				height: 7vh;
+				width: 7vh;
+				transform: translateX(20vw);
+				transition: 1s;
+				opacity: 0;
+				img {
+					position: relative;
+					top: 0;
+					left: 0;
+					height: 5vh;
+					width: 5vh;
 				}
 			}
 		}
@@ -105,7 +149,7 @@
 		}
 		.wire {
 			clip: rect(0, 100vw, 100vh, 0vh);
-			transition: 2s;
+			transition: 3s;
 			// transition-timing-function: cubic-bezier(0.26, 0.53, 0.68, 0);
 			// transition-timing-function: cubic-bezier(0.57, 0.62, 0.48, 0.07);
 			// transition-timing-function: cubic-bezier(0.52, 0.42, 0.52, 0);
@@ -114,7 +158,34 @@
 		.aboutitems {
 			.item {
 				transform: translateX(0);
+				transition: 1.6s;
+				transition-delay: 1s;
 				opacity: 1;
+			}
+		}
+		.skillsitems {
+			.title {
+				transform: translateX(0);
+				transition-delay: 0.5s;
+				opacity: 1;
+			}
+			.itemwrapper {
+				.item {
+					opacity: 1;
+					transform: translateX(0);
+					&.firstrow {
+						transition-delay: 1s;
+					}
+					&.secondrow {
+						transition-delay: 1.2s;
+					}
+					&.thirdrow {
+						transition-delay: 1.4s;
+					}
+					&.fourthrow {
+						transition-delay: 1.6s;
+					}
+				}
 			}
 		}
 	}

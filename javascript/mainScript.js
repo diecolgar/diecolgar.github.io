@@ -81,6 +81,7 @@ window.addEventListener("resize", function (event) {
 
 // MOUSE WHEEL EVENT LISTENER
 window.addEventListener("wheel", event => {
+    console.log('wheeeelin')
 
     firsttopPosition = home.getBoundingClientRect().top
     lasttopPosition = contact.getBoundingClientRect().top
