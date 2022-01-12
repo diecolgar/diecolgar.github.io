@@ -46,7 +46,7 @@
 		color: white;
 		position: absolute;
 		top: 78vh;
-		left: 1vw;
+		left: 1.3vw;
 		opacity: 0;
 		transform: rotate(-90deg) translateX(30vh);
 		letter-spacing: 2px;
@@ -67,17 +67,19 @@
 			transform: translateX(0);
 			transition: 1.4s;
 		}
-		.wire {
-			top: 20vh;
-			height: 80vh;
-			transition: 1s;
-			transition-delay: 0.5s;
-		}
 		.scrolldown {
 			transform: translateX(0) rotate(-90deg);
 			opacity: 1;
 			transition: 1s;
 			transition-delay: 1s;
+		}
+	}
+	&.wire-active {
+		.wire {
+			top: 20vh;
+			height: 80vh;
+			transition: 1s;
+			transition-delay: 0.5s;
 		}
 	}
 }

@@ -188,7 +188,7 @@ nav.hidden .left {
   color: white;
   position: absolute;
   top: 78vh;
-  left: 1vw;
+  left: 1.3vw;
   opacity: 0;
   -webkit-transform: rotate(-90deg) translateX(30vh);
           transform: rotate(-90deg) translateX(30vh);
@@ -219,15 +219,6 @@ nav.hidden .left {
   transition: 1.4s;
 }
 
-.home.active .wire {
-  top: 20vh;
-  height: 80vh;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-
 .home.active .scrolldown {
   -webkit-transform: translateX(0) rotate(-90deg);
           transform: translateX(0) rotate(-90deg);
@@ -236,6 +227,15 @@ nav.hidden .left {
   transition: 1s;
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
+}
+
+.home.wire-active .wire {
+  top: 20vh;
+  height: 80vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .aboutme {
@@ -252,10 +252,10 @@ nav.hidden .left {
   -webkit-transition: 0.8s;
   transition: 0.8s;
   position: relative;
-  top: 20vh;
+  top: 15vh;
   left: 10vw;
   color: white;
-  font-size: 12vh;
+  font-size: 14vh;
   z-index: 10;
 }
 
@@ -265,16 +265,17 @@ nav.hidden .left {
   left: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   clip: rect(0, 4.4vw, 100vh, 0);
+  z-index: -10;
 }
 
 .aboutme .aboutitems {
   position: absolute;
   top: 38vh;
-  left: 9.5vw;
-  width: 40vw;
+  left: 9vw;
+  width: 38vw;
   height: 40vh;
   color: white;
 }
@@ -306,16 +307,20 @@ nav.hidden .left {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-weight: 300;
 }
 
 .aboutme .aboutitems .item .right .up {
-  font-size: 1.1vw;
+  font-size: 2vh;
 }
 
 .aboutme .aboutitems .item .right .down {
-  font-size: 0.9vw;
+  font-size: 1.7vh;
   margin-left: 1.5vw;
-  font-weight: 300;
+}
+
+.aboutme .aboutitems .item .right .downer {
+  font-size: 1.7vh;
 }
 
 .aboutme .aboutitems .item.origin {
@@ -324,14 +329,12 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item.origin .left {
-  height: 50%;
-  margin-left: 8vw;
+  height: 55%;
+  margin-left: 8.5vw;
 }
 
 .aboutme .aboutitems .item.origin .downer {
-  font-size: 0.9vw;
-  margin-left: 1.9vw;
-  font-weight: 300;
+  margin-left: 2vw;
 }
 
 .aboutme .aboutitems .item.studies {
@@ -341,13 +344,11 @@ nav.hidden .left {
 
 .aboutme .aboutitems .item.studies .left {
   height: 35%;
-  margin-left: 9.5vw;
+  margin-left: 10vw;
 }
 
 .aboutme .aboutitems .item.studies .downer {
-  font-size: 0.9vw;
-  margin-left: 2.6vw;
-  font-weight: 300;
+  margin-left: 2.7vw;
 }
 
 .aboutme .aboutitems .item.work {
@@ -361,15 +362,13 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item.work .downer {
-  font-size: 0.9vw;
-  margin-left: 1.7vw;
-  font-weight: 300;
+  margin-left: 1.3vw;
 }
 
 .aboutme .skillsitems {
   position: absolute;
-  top: 52vh;
-  left: 66vw;
+  top: 46.5vh;
+  left: 61vw;
   width: 30vw;
   height: 50vh;
   color: white;
@@ -379,22 +378,29 @@ nav.hidden .left {
   position: relative;
   top: 0;
   left: 4vw;
-  font-size: 1.6vw;
+  font-size: 3vh;
   height: 7vh;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transform: translateX(20vw);
           transform: translateX(20vw);
+  width: 15vh;
   opacity: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
+  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .aboutme .skillsitems .itemwrapper {
   display: -ms-grid;
   display: grid;
+  margin-top: 0.5vw;
   width: 25vw;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1vw;
+  grid-gap: 1.2vw;
 }
 
 .aboutme .skillsitems .itemwrapper .item {
@@ -429,33 +435,11 @@ nav.hidden .left {
   width: 5vh;
 }
 
-.aboutme.active div {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-}
-
-.aboutme.active .wire {
-  clip: rect(0, 100vw, 100vh, 0vh);
-  -webkit-transition: 3s;
-  transition: 3s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-
 .aboutme.active .aboutitems .item {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: 1.6s;
   transition: 1.6s;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  opacity: 1;
-}
-
-.aboutme.active .skillsitems .title {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
   opacity: 1;
@@ -468,23 +452,37 @@ nav.hidden .left {
 }
 
 .aboutme.active .skillsitems .itemwrapper .item.firstrow {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .aboutme.active .skillsitems .itemwrapper .item.secondrow {
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
 }
 
 .aboutme.active .skillsitems .itemwrapper .item.thirdrow {
-  -webkit-transition-delay: 1.4s;
-          transition-delay: 1.4s;
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
 }
 
 .aboutme.active .skillsitems .itemwrapper .item.fourthrow {
-  -webkit-transition-delay: 1.6s;
-          transition-delay: 1.6s;
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+.aboutme.wire-active .title {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.aboutme.wire-active .wire {
+  clip: rect(0, 100vw, 100vh, 0vh);
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .mywork {

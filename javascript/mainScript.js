@@ -35,6 +35,7 @@ function enableDisplacement() {
 // ACTIVATING FIRST PAGE WHEN LOADING
 function activateHome() {
     home.classList.add("active")
+    home.classList.add("wire-active")
 }
 setTimeout(activateHome, 100)
 
@@ -42,10 +43,14 @@ setTimeout(activateHome, 100)
 function activateSlide() {
     section.forEach((section, id) => {
         section.classList.remove('active')
+        section.classList.remove('wire-active')
         if (currentSlide == id) {
             console.log(id)
             section.classList.add('active')
             id == 0 ? nav.classList.add('hidden') : nav.classList.remove('hidden')
+        }
+        if (currentSlide >= id) {
+            section.classList.add('wire-active')
         }
     });
 }
