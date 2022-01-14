@@ -38,7 +38,6 @@
 		top: 100vh;
 		left: 0;
 		width: 100vw;
-		// height: 80vh;
 		height: 0vh;
 		transition: 1s;
 	}
@@ -46,9 +45,10 @@
 		color: white;
 		position: absolute;
 		top: 78vh;
-		left: 1.3vw;
+		left: 1.4vw;
 		opacity: 0;
 		transform: rotate(-90deg) translateX(30vh);
+		font-size: 1.6w;
 		letter-spacing: 2px;
 	}
 	&.active {
@@ -73,8 +73,6 @@
 			transition: 1s;
 			transition-delay: 1s;
 		}
-	}
-	&.wire-active {
 		.wire {
 			top: 20vh;
 			height: 80vh;
