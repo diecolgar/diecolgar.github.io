@@ -51,7 +51,17 @@
 				flex-direction: column;
 				font-weight: 300;
 				.up {
-					font-size: 2vh;
+					font-size: 1.7vh;
+					font-weight: bold;
+					text-transform: uppercase;
+					background: linear-gradient(
+						to right,
+						#ec4a21 0%,
+						#b24ae2 100%
+					);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 				.down {
 					font-size: 1.7vh;
@@ -147,6 +157,18 @@
 	}
 
 	&.active {
+		.title {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.wire {
+			clip: rect(0, 100vw, 100vh, 0vh);
+			transition: 3s;
+			// transition-timing-function: cubic-bezier(0.26, 0.53, 0.68, 0);
+			// transition-timing-function: cubic-bezier(0.57, 0.62, 0.48, 0.07);
+			// transition-timing-function: cubic-bezier(0.52, 0.42, 0.52, 0);
+			transition-timing-function: ease-in-out;
+		}
 		.aboutitems {
 			.item {
 				transform: translateX(0);
@@ -174,20 +196,6 @@
 					}
 				}
 			}
-		}
-	}
-	&.wire-active {
-		.title {
-			transform: translateY(0);
-			opacity: 1;
-		}
-		.wire {
-			clip: rect(0, 100vw, 100vh, 0vh);
-			transition: 3s;
-			// transition-timing-function: cubic-bezier(0.26, 0.53, 0.68, 0);
-			// transition-timing-function: cubic-bezier(0.57, 0.62, 0.48, 0.07);
-			// transition-timing-function: cubic-bezier(0.52, 0.42, 0.52, 0);
-			transition-timing-function: ease-in-out;
 		}
 	}
 }
