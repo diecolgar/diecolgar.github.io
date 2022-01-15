@@ -181,7 +181,7 @@
 		justify-content: center;
 		transform: translateX(20vw);
 		opacity: 0;
-		transition: 1.5s;
+		transition: 1s;
 		.arrow {
 			transition: 0.5s;
 			height: 3px;
@@ -205,7 +205,6 @@
 		&.opened {
 			// cursor: pointer;
 			transform: translateX(10vw) !important;
-			transition: 0.5s !important;
 			.arrow {
 				background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
 				&.up {
@@ -228,14 +227,17 @@
 		height: 100vh;
 		width: 0vw;
 		z-index: 15;
+		backdrop-filter: blur(5px);
+		visibility: hidden;
 		&.opened {
 			backdrop-filter: blur(5px);
 			width: 100vw;
+			visibility: visible;
 		}
 	}
 	.mystory {
 		position: absolute;
-		width: 35vw;
+		width: 30vw;
 		height: 100vh;
 		top: 0;
 		left: 100vw;
@@ -246,14 +248,65 @@
 			left: 0vw;
 		}
 		.story {
-			background: linear-gradient(
-				30deg,
-				rgba(108, 0, 145, 0.99) 0%,
-				rgba(79, 0, 105, 0.99) 24%,
-				rgba(122, 80, 0, 0.99) 100%
-			);
-			width: 100vw;
+			// background: linear-gradient(
+			// 	30deg,
+			// 	rgba(108, 0, 145, 0.99) 0%,
+			// 	rgba(79, 0, 105, 0.99) 24%,
+			// 	rgba(122, 80, 0, 0.99) 100%
+			// );
+			width: 30vw;
 			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: 0.5s;
+			p {
+				width: 23vw;
+				color: white;
+				font-size: 1vw;
+				font-weight: 300;
+				margin-bottom: 1rem;
+				text-indent: 2rem;
+			}
+			img {
+				width: 3vw;
+				position: relative;
+				left: 7vw;
+			}
+			&.one {
+				opacity: 1;
+			}
+		}
+		.story-iterator {
+			position: absolute;
+			top: 80vh;
+			left: 12.5vw;
+			width: 5vw;
+			height: 5vh;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.iterator-ball {
+				height: 1vh;
+				width: 1vh;
+				border: 0.3vh solid rgb(255, 255, 255);
+				border-radius: 50%;
+			}
+			.iterator-ball-filled {
+				height: 1vh;
+				width: 1vh;
+				border: 0.3vh solid rgb(255, 255, 255);
+				background-color: white;
+				position: absolute;
+				left: 0vw;
+				border-radius: 50%;
+				transition: 0.5s;
+			}
 		}
 	}
 	&.active {

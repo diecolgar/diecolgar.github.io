@@ -24,14 +24,13 @@ html {
 
 body {
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(
-		180deg,
-		rgba(61, 0, 53, 0.99) 0%,
-		rgba(51, 0, 71, 0.99) 25%,
-		rgba(0, 8, 77, 0.99) 50%,
-		rgba(73, 9, 0, 0.99) 75%,
-		rgba(92, 0, 50, 0.99) 100%
-	);
+	// background: linear-gradient(
+	// 	180deg,
+	// 	rgba(0, 0, 0, 1) 0%,
+	// 	rgba(27, 27, 27, 1) 100%
+	// );
+	// background-color: rgb(30, 30, 30);
+	background-color: rgb(0, 0, 0);
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
