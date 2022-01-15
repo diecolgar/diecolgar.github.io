@@ -482,8 +482,11 @@ nav.hidden .left {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateX(50vw);
-          transform: translateX(50vw);
+  -webkit-transform: translateX(20vw);
+          transform: translateX(20vw);
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .aboutme .mystorybutton .arrow {
@@ -514,6 +517,18 @@ nav.hidden .left {
   cursor: pointer;
 }
 
+.aboutme .mystorybutton.opened {
+  -webkit-transform: translateX(10vw) !important;
+          transform: translateX(10vw) !important;
+  -webkit-transition: 0.5s !important;
+  transition: 0.5s !important;
+}
+
+.aboutme .mystorybutton.opened .arrow {
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff));
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+}
+
 .aboutme .mystorybutton.opened .arrow.up {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -522,6 +537,21 @@ nav.hidden .left {
 .aboutme .mystorybutton.opened .arrow.down {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+
+.aboutme .blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0vw;
+  z-index: 15;
+}
+
+.aboutme .blur.opened {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100vw;
 }
 
 .aboutme .mystory {
@@ -540,14 +570,6 @@ nav.hidden .left {
 
 .aboutme .mystory.opened {
   left: 0vw;
-}
-
-.aboutme .mystory .blur {
-  background: rgba(255, 255, 255, 0.308);
-  width: 0vw;
-  height: 100vh;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 
 .aboutme .mystory .story {
@@ -624,10 +646,6 @@ nav.hidden .left {
 .aboutme.active .mystorybutton {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: 2s;
-  transition: 2s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
   opacity: 1;
 }
 
@@ -737,7 +755,6 @@ nav.hidden .left {
   width: 100vw;
   height: 100vh;
   color: black;
-  background: #49006b;
   background: linear-gradient(30deg, #670097 5%, #8500b1 24%, #d38900 100%);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,8 +818,8 @@ body.stop-transitions * {
 }
 
 .content {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../img/background.png");
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/background.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../img/background.webp");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/background.webp");
   background-size: cover;
   background-position: left top;
   -webkit-box-align: center;

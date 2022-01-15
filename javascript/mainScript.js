@@ -56,6 +56,7 @@ function resetHorizontalItems() {
     // myStoryButton is horizontal position dependent, so it has to be toggled
     if (horizontalPosition !== 30) {
         myStoryButton.classList.remove('opened')
+        aboutMeBlur.classList.remove('opened')
     }
 }
 

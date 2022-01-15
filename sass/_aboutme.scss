@@ -179,7 +179,9 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		transform: translateX(50vw);
+		transform: translateX(20vw);
+		opacity: 0;
+		transition: 1.5s;
 		.arrow {
 			transition: 0.5s;
 			height: 3px;
@@ -202,8 +204,10 @@
 		}
 		&.opened {
 			// cursor: pointer;
+			transform: translateX(10vw) !important;
+			transition: 0.5s !important;
 			.arrow {
-				// background: white;
+				background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
 				&.up {
 					transform: rotate(135deg);
 					// top: 18px;
@@ -217,6 +221,18 @@
 			}
 		}
 	}
+	.blur {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 0vw;
+		z-index: 15;
+		&.opened {
+			backdrop-filter: blur(5px);
+			width: 100vw;
+		}
+	}
 	.mystory {
 		position: absolute;
 		width: 35vw;
@@ -228,12 +244,6 @@
 		transition: 1s;
 		&.opened {
 			left: 0vw;
-		}
-		.blur {
-			background: rgba(255, 255, 255, 0.308);
-			width: 0vw;
-			height: 100vh;
-			backdrop-filter: blur(5px);
 		}
 		.story {
 			background: linear-gradient(
@@ -295,8 +305,6 @@
 		}
 		.mystorybutton {
 			transform: translateX(0);
-			transition: 2s;
-			transition-delay: 0.5s;
 			opacity: 1;
 		}
 	}
