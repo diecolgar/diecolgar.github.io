@@ -44,7 +44,7 @@
 	.scrolldown {
 		color: white;
 		position: absolute;
-		top: 78vh;
+		top: 89vh;
 		left: 1.4vw;
 		opacity: 0;
 		transform: rotate(-90deg) translateX(30vh);
@@ -73,11 +73,11 @@
 			transition: 1s;
 			transition-delay: 1s;
 		}
-		.wire {
-			top: 20vh;
-			height: 80vh;
-			transition: 1s;
-			transition-delay: 0.5s;
-		}
+		// .wire {
+		// 	top: 20vh;
+		// 	height: 80vh;
+		// 	transition: 1s;
+		// 	transition-delay: 0.5s;
+		// }
 	}
 }

@@ -24,6 +24,7 @@ const separator = document.querySelector(".separator");
 let allowDisplacement = true
 let displaced = 0
 let currentSlide = 0
+let horizontalPosition = 0
 
 // ---------- FUNCTIONS ---------- //
 
@@ -35,7 +36,6 @@ function enableDisplacement() {
 // ACTIVATING FIRST PAGE WHEN LOADING
 function activateHome() {
     home.classList.add("active")
-    home.classList.add("wire-active")
 }
 setTimeout(activateHome, 100)
 
@@ -43,7 +43,6 @@ setTimeout(activateHome, 100)
 function activateSlide() {
     section.forEach((section, id) => {
         section.classList.remove('active')
-        section.classList.remove('wire-active')
         if (currentSlide >= id) {
             console.log(id)
             section.classList.add('active')
@@ -52,10 +51,20 @@ function activateSlide() {
     });
 }
 
+// RESET HORIZONTAL POSITION
+function resetHorizontalItems() {
+    // myStoryButton is horizontal position dependent, so it has to be toggled
+    if (horizontalPosition !== 30) {
+        myStoryButton.classList.remove('opened')
+    }
+}
+
 // MOVING SLIDES
 function moveSlide() {
     allowDisplacement = false
-    content.style.transform = `translateY(${-currentSlide * 100}vh)`
+    resetHorizontalItems() // this resets horizontal items for the current moveSlide() call
+    content.style.transform = `translateY(${-currentSlide * 100}vh) translateX(${-horizontalPosition}vw)`
+    horizontalPosition = 0 // this resets horizontal position for the next moveSlide() call
     setTimeout(enableDisplacement, 1000)
     setTimeout(activateSlide, 500)
 }
@@ -66,11 +75,6 @@ function menuHandler() {
     displayableMenu.classList.contains('hidden') ? allowDisplacement = true : allowDisplacement = false;
     navMenu.classList.toggle('closed')
 }
-
-
-// SCREEN PARAMETERS
-let screen_height = screen.height
-let screen_width = screen.width
 
 // THIS WEB PAGE BEHAVIOUR IS ESSENTIALLY DIFFERENT FOR MOBILE (SLIDING) AND COMPUTER (MOUSEWHEEL/TOUCHPAD) DEVICES
 // DUE TO THE INEFFICIENT SNAP SCROLLING THAT CSS PROVIDES FOR PC AND MY DESIRE OF DEVELOPING MYSELF THE SLIDING EFFECT

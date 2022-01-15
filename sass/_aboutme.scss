@@ -1,7 +1,6 @@
 .aboutme {
 	display: flex;
 	position: relative;
-
 	.title {
 		transform: translateY(-20vh);
 		opacity: 0;
@@ -13,90 +12,6 @@
 		font-size: 14vh;
 		z-index: 10;
 	}
-	.readmystory {
-		position: absolute;
-		opacity: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: 0.8s;
-		top: 55.5vh;
-		left: 72vw;
-		font-size: 3vh;
-		z-index: 10;
-		background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		text-transform: uppercase;
-		opacity: 0;
-		transform: translateX(20vw);
-		.button {
-			position: absolute;
-			top: 18.5vh;
-			left: 11vw;
-			background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-			height: 38px;
-			width: 38px;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transform: translateX(50vw);
-			.innercircle {
-				height: 32px;
-				width: 32px;
-				background-color: black;
-				border-radius: 50%;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				.arrow {
-					transition: 0.5s;
-					position: absolute;
-					height: 2px;
-					width: 12px;
-					border-radius: 20%;
-					background: linear-gradient(
-						to right,
-						#ec4a21 0%,
-						#b24ae2 100%
-					);
-					&.up {
-						transform: rotate(40deg);
-						top: 15px;
-						left: 14px;
-					}
-					&.down {
-						transform: rotate(-40deg);
-						bottom: 14px;
-						left: 14px;
-					}
-				}
-			}
-			&:hover {
-				cursor: pointer;
-			}
-			.opened {
-				// cursor: pointer;
-				.arrow {
-					width: 16px;
-					&.up {
-						transform: rotate(-45deg);
-						top: 18px;
-						left: 11px;
-					}
-					&.down {
-						transform: rotate(45deg);
-						top: 18px;
-						left: 11px;
-					}
-				}
-			}
-		}
-	}
-
 	.wire {
 		position: absolute;
 		top: 0;
@@ -108,7 +23,6 @@
 		z-index: -10;
 		// background-color: rgba(187, 10, 10, 0.356);
 	}
-
 	.aboutitems {
 		position: absolute;
 		top: 38vh;
@@ -133,7 +47,7 @@
 				flex-direction: column;
 				font-weight: 300;
 				.up {
-					font-size: 1.7vh;
+					font-size: 2vh;
 					font-weight: bold;
 					text-transform: uppercase;
 					background: linear-gradient(
@@ -147,7 +61,7 @@
 				}
 				.down {
 					font-size: 1.7vh;
-					margin-left: 1.5vw;
+					margin-left: 2vw;
 				}
 				.downer {
 					font-size: 1.7vh;
@@ -160,7 +74,7 @@
 					margin-left: 8.5vw;
 				}
 				.downer {
-					margin-left: 2vw;
+					margin-left: 2.5vw;
 				}
 			}
 			&.studies {
@@ -170,7 +84,7 @@
 					margin-left: 10vw;
 				}
 				.downer {
-					margin-left: 2.7vw;
+					margin-left: 3.2vw;
 				}
 			}
 			&.work {
@@ -180,12 +94,11 @@
 					margin-left: 12vw;
 				}
 				.downer {
-					margin-left: 1.3vw;
+					margin-left: 1.8vw;
 				}
 			}
 		}
 	}
-
 	.skillsitems {
 		position: absolute;
 		top: 43vh;
@@ -195,9 +108,9 @@
 		color: white;
 		.title {
 			position: relative;
-			top: 0;
-			left: 4vw;
-			font-size: 3vh;
+			top: 2vh;
+			left: 4.5vw;
+			font-size: 2.7vh;
 			height: 7vh;
 			transition: 1s;
 			transform: translateY(20vh);
@@ -230,13 +143,109 @@
 					position: relative;
 					top: 0;
 					left: 0;
-					height: 4vh;
-					width: 4vh;
+					height: 4.5vh;
+					width: 4.5vh;
 				}
 			}
 		}
 	}
-
+	.readmystory {
+		position: absolute;
+		opacity: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 0.8s;
+		top: 55.5vh;
+		left: 71.5vw;
+		font-size: 3vh;
+		background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+		opacity: 0;
+		transform: translateX(20vw);
+	}
+	.mystorybutton {
+		position: absolute;
+		top: 73vh;
+		left: 83vw;
+		height: 38px;
+		width: 38px;
+		border-radius: 50%;
+		z-index: 20;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transform: translateX(50vw);
+		.arrow {
+			transition: 0.5s;
+			height: 3px;
+			width: 20px;
+			position: absolute;
+			background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
+			&.up {
+				transform: rotate(45deg);
+				top: 12px;
+				left: 14px;
+			}
+			&.down {
+				transform: rotate(-45deg);
+				bottom: 11px;
+				left: 14px;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&.opened {
+			// cursor: pointer;
+			.arrow {
+				// background: white;
+				&.up {
+					transform: rotate(135deg);
+					// top: 18px;
+					// left: 11px;
+				}
+				&.down {
+					transform: rotate(-135deg);
+					// top: 18px;
+					// left: 11px;
+				}
+			}
+		}
+	}
+	.mystory {
+		position: absolute;
+		width: 35vw;
+		height: 100vh;
+		top: 0;
+		left: 100vw;
+		display: flex;
+		z-index: 10;
+		transition: 1s;
+		&.opened {
+			left: 0vw;
+		}
+		.blur {
+			background: rgba(255, 255, 255, 0.308);
+			width: 0vw;
+			height: 100vh;
+			backdrop-filter: blur(5px);
+		}
+		.story {
+			background: linear-gradient(
+				30deg,
+				rgba(108, 0, 145, 0.99) 0%,
+				rgba(79, 0, 105, 0.99) 24%,
+				rgba(122, 80, 0, 0.99) 100%
+			);
+			width: 100vw;
+			height: 100vh;
+		}
+	}
 	&.active {
 		.title {
 			transform: translateY(0);
@@ -283,10 +292,12 @@
 			transition: 1.6s;
 			transition-delay: 0.5s;
 			opacity: 1;
-			.button {
-				transform: translateX(0);
-				transition: 2s;
-			}
+		}
+		.mystorybutton {
+			transform: translateX(0);
+			transition: 2s;
+			transition-delay: 0.5s;
+			opacity: 1;
 		}
 	}
 }

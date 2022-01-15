@@ -187,7 +187,7 @@ nav.hidden .left {
 .home .scrolldown {
   color: white;
   position: absolute;
-  top: 78vh;
+  top: 89vh;
   left: 1.4vw;
   opacity: 0;
   -webkit-transform: rotate(-90deg) translateX(30vh);
@@ -230,15 +230,6 @@ nav.hidden .left {
           transition-delay: 1s;
 }
 
-.home.active .wire {
-  top: 20vh;
-  height: 80vh;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-
 .aboutme {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,124 +249,6 @@ nav.hidden .left {
   color: white;
   font-size: 14vh;
   z-index: 10;
-}
-
-.aboutme .readmystory {
-  position: absolute;
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  top: 55.5vh;
-  left: 72vw;
-  font-size: 3vh;
-  z-index: 10;
-  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
-  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  opacity: 0;
-  -webkit-transform: translateX(20vw);
-          transform: translateX(20vw);
-}
-
-.aboutme .readmystory .button {
-  position: absolute;
-  top: 18.5vh;
-  left: 11vw;
-  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
-  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-  height: 38px;
-  width: 38px;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateX(50vw);
-          transform: translateX(50vw);
-}
-
-.aboutme .readmystory .button .innercircle {
-  height: 32px;
-  width: 32px;
-  background-color: black;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.aboutme .readmystory .button .innercircle .arrow {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: absolute;
-  height: 2px;
-  width: 12px;
-  border-radius: 20%;
-  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
-  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-}
-
-.aboutme .readmystory .button .innercircle .arrow.up {
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-  top: 15px;
-  left: 14px;
-}
-
-.aboutme .readmystory .button .innercircle .arrow.down {
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
-  bottom: 14px;
-  left: 14px;
-}
-
-.aboutme .readmystory .button:hover {
-  cursor: pointer;
-}
-
-.aboutme .readmystory .button .opened .arrow {
-  width: 16px;
-}
-
-.aboutme .readmystory .button .opened .arrow.up {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 18px;
-  left: 11px;
-}
-
-.aboutme .readmystory .button .opened .arrow.down {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 18px;
-  left: 11px;
 }
 
 .aboutme .wire {
@@ -430,7 +303,7 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item .right .up {
-  font-size: 1.7vh;
+  font-size: 2vh;
   font-weight: bold;
   text-transform: uppercase;
   background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
@@ -442,7 +315,7 @@ nav.hidden .left {
 
 .aboutme .aboutitems .item .right .down {
   font-size: 1.7vh;
-  margin-left: 1.5vw;
+  margin-left: 2vw;
 }
 
 .aboutme .aboutitems .item .right .downer {
@@ -460,7 +333,7 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item.origin .downer {
-  margin-left: 2vw;
+  margin-left: 2.5vw;
 }
 
 .aboutme .aboutitems .item.studies {
@@ -474,7 +347,7 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item.studies .downer {
-  margin-left: 2.7vw;
+  margin-left: 3.2vw;
 }
 
 .aboutme .aboutitems .item.work {
@@ -488,7 +361,7 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item.work .downer {
-  margin-left: 1.3vw;
+  margin-left: 1.8vw;
 }
 
 .aboutme .skillsitems {
@@ -502,9 +375,9 @@ nav.hidden .left {
 
 .aboutme .skillsitems .title {
   position: relative;
-  top: 0;
-  left: 4vw;
-  font-size: 3vh;
+  top: 2vh;
+  left: 4.5vw;
+  font-size: 2.7vh;
   height: 7vh;
   -webkit-transition: 1s;
   transition: 1s;
@@ -556,8 +429,131 @@ nav.hidden .left {
   position: relative;
   top: 0;
   left: 0;
-  height: 4vh;
-  width: 4vh;
+  height: 4.5vh;
+  width: 4.5vh;
+}
+
+.aboutme .readmystory {
+  position: absolute;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  top: 55.5vh;
+  left: 71.5vw;
+  font-size: 3vh;
+  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
+  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transform: translateX(20vw);
+          transform: translateX(20vw);
+}
+
+.aboutme .mystorybutton {
+  position: absolute;
+  top: 73vh;
+  left: 83vw;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(50vw);
+          transform: translateX(50vw);
+}
+
+.aboutme .mystorybutton .arrow {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 3px;
+  width: 20px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
+  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
+}
+
+.aboutme .mystorybutton .arrow.up {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 12px;
+  left: 14px;
+}
+
+.aboutme .mystorybutton .arrow.down {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 11px;
+  left: 14px;
+}
+
+.aboutme .mystorybutton:hover {
+  cursor: pointer;
+}
+
+.aboutme .mystorybutton.opened .arrow.up {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.aboutme .mystorybutton.opened .arrow.down {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.aboutme .mystory {
+  position: absolute;
+  width: 35vw;
+  height: 100vh;
+  top: 0;
+  left: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.aboutme .mystory.opened {
+  left: 0vw;
+}
+
+.aboutme .mystory .blur {
+  background: rgba(255, 255, 255, 0.308);
+  width: 0vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.aboutme .mystory .story {
+  background: linear-gradient(30deg, rgba(108, 0, 145, 0.99) 0%, rgba(79, 0, 105, 0.99) 24%, rgba(122, 80, 0, 0.99) 100%);
+  width: 100vw;
+  height: 100vh;
 }
 
 .aboutme.active .title {
@@ -625,11 +621,14 @@ nav.hidden .left {
   opacity: 1;
 }
 
-.aboutme.active .readmystory .button {
+.aboutme.active .mystorybutton {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: 2s;
   transition: 2s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  opacity: 1;
 }
 
 .mywork {
@@ -739,7 +738,7 @@ nav.hidden .left {
   height: 100vh;
   color: black;
   background: #49006b;
-  background: linear-gradient(30deg, #49006b 5%, #660087 24%, #a87f00 100%);
+  background: linear-gradient(30deg, #670097 5%, #8500b1 24%, #d38900 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -790,7 +789,8 @@ html {
 
 body {
   font-family: 'Jost', sans-serif;
-  background-color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 0, 53, 0.99)), color-stop(25%, rgba(51, 0, 71, 0.99)), color-stop(50%, rgba(0, 8, 77, 0.99)), color-stop(75%, rgba(73, 9, 0, 0.99)), to(rgba(92, 0, 50, 0.99)));
+  background: linear-gradient(180deg, rgba(61, 0, 53, 0.99) 0%, rgba(51, 0, 71, 0.99) 25%, rgba(0, 8, 77, 0.99) 50%, rgba(73, 9, 0, 0.99) 75%, rgba(92, 0, 50, 0.99) 100%);
   overflow-y: hidden;
   overflow-x: hidden;
 }

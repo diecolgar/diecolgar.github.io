@@ -9,12 +9,11 @@
 	width: 100vw;
 	height: 100vh;
 	color: rgb(0, 0, 0);
-	background: rgb(73, 0, 107);
 	background: linear-gradient(
 		30deg,
-		rgba(73, 0, 107, 1) 5%,
-		rgba(102, 0, 135, 1) 24%,
-		rgba(168, 127, 0, 1) 100%
+		rgb(103, 0, 151) 5%,
+		rgb(133, 0, 177) 24%,
+		rgb(211, 137, 0) 100%
 	);
 	&.hidden {
 		visibility: hidden;
