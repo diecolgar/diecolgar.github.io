@@ -248,12 +248,6 @@
 			left: 0vw;
 		}
 		.story {
-			// background: linear-gradient(
-			// 	30deg,
-			// 	rgba(108, 0, 145, 0.99) 0%,
-			// 	rgba(79, 0, 105, 0.99) 24%,
-			// 	rgba(122, 80, 0, 0.99) 100%
-			// );
 			width: 30vw;
 			height: 100vh;
 			display: flex;
@@ -296,6 +290,9 @@
 				width: 1vh;
 				border: 0.3vh solid rgb(255, 255, 255);
 				border-radius: 50%;
+				&:hover {
+					cursor: pointer;
+				}
 			}
 			.iterator-ball-filled {
 				height: 1vh;

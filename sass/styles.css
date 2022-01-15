@@ -641,6 +641,10 @@ nav.hidden .left {
   border-radius: 50%;
 }
 
+.aboutme .mystory .story-iterator .iterator-ball:hover {
+  cursor: pointer;
+}
+
 .aboutme .mystory .story-iterator .iterator-ball-filled {
   height: 1vh;
   width: 1vh;
