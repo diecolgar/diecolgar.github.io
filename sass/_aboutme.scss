@@ -26,7 +26,7 @@
 	.aboutitems {
 		position: absolute;
 		top: 38vh;
-		left: 9vw;
+		left: 10vw;
 		width: 38vw;
 		height: 40vh;
 		color: white;
@@ -48,7 +48,7 @@
 				font-weight: 300;
 				.up {
 					font-size: 2vh;
-					font-weight: bold;
+					font-weight: 500;
 					text-transform: uppercase;
 					background: linear-gradient(
 						to right,
@@ -70,7 +70,7 @@
 			&.origin {
 				transform: translateX(-10vw);
 				.left {
-					height: 55%;
+					height: 45%;
 					margin-left: 8.5vw;
 				}
 				.downer {
@@ -80,7 +80,7 @@
 			&.studies {
 				transform: translateX(-30vw);
 				.left {
-					height: 35%;
+					height: 30%;
 					margin-left: 10vw;
 				}
 				.downer {
@@ -90,7 +90,7 @@
 			&.work {
 				transform: translateX(-40vw);
 				.left {
-					height: 40%;
+					height: 30%;
 					margin-left: 12vw;
 				}
 				.downer {
@@ -101,15 +101,15 @@
 	}
 	.skillsitems {
 		position: absolute;
-		top: 43vh;
-		left: 42vw;
+		top: 42vh;
+		left: 43vw;
 		width: 30vw;
 		height: 50vh;
 		color: white;
 		.title {
 			position: relative;
 			top: 2vh;
-			left: 4.5vw;
+			left: 4vw;
 			font-size: 2.7vh;
 			height: 7vh;
 			transition: 1s;
@@ -134,8 +134,8 @@
 				align-items: center;
 				font-size: 0.7vw;
 				color: rgb(255, 255, 255);
-				height: 6vh;
-				width: 6vh;
+				height: 5.5vh;
+				width: 5.5vh;
 				transform: translateY(20vh);
 				transition: 1s;
 				opacity: 0;
@@ -143,8 +143,8 @@
 					position: relative;
 					top: 0;
 					left: 0;
-					height: 4.5vh;
-					width: 4.5vh;
+					height: 3.5vh;
+					width: 3.5vh;
 				}
 			}
 		}
@@ -156,8 +156,8 @@
 		align-items: center;
 		justify-content: center;
 		transition: 0.8s;
-		top: 55.5vh;
-		left: 71.5vw;
+		top: 56vh;
+		left: 69vw;
 		font-size: 3vh;
 		background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
 		background-clip: text;
@@ -169,8 +169,8 @@
 	}
 	.mystorybutton {
 		position: absolute;
-		top: 73vh;
-		left: 83vw;
+		top: 77vh;
+		left: 86vw;
 		height: 38px;
 		width: 38px;
 		border-radius: 50%;
@@ -315,6 +315,7 @@
 			clip: rect(0, 100vw, 100vh, 0vh);
 			transition: 3s;
 			transition-timing-function: ease-in-out;
+			// opacity: 0.4;
 		}
 		.aboutitems {
 			.item {
