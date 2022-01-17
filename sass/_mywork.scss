@@ -1,17 +1,140 @@
 .mywork {
 	display: flex;
-	transform: translateY(-20vh);
-	opacity: 0;
-	transition: 0.8s;
-	div {
+	position: relative;
+	.title {
 		position: relative;
 		top: 15vh;
 		left: 10vw;
 		color: white;
 		font-size: 7vw;
+		transform: translateY(-20vh);
+		opacity: 0;
+		transition: 0.8s;
 	}
 	&.active {
-		transform: translateY(0);
-		opacity: 1;
+		.title {
+			transform: translateY(0);
+			opacity: 1;
+			width: 40vw;
+		}
+	}
+	.displayer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 65vw;
+		height: 100vh;
+	}
+	.container {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 66vw;
+		width: 35vw;
+		height: 100vh;
+		margin-top: 20vh;
+		.item {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			text-transform: uppercase;
+			border-radius: 0.2rem;
+			transition: ease-in-out 1s;
+			img {
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+			&.valorantreact {
+				background: linear-gradient(
+						180deg,
+						rgba(160, 25, 205, 0.7) 0%,
+						rgba(0, 40, 180, 0.7) 100%
+					),
+					url('../img/mywork/valorantreact.png');
+				background-size: cover;
+			}
+			&.ios {
+				background: linear-gradient(
+						180deg,
+						rgba(160, 25, 205, 0.7) 0%,
+						rgba(0, 40, 180, 0.7) 100%
+					),
+					url('../img/mywork/iosdesigns.png');
+				background-size: cover;
+			}
+			&.minipeople {
+				background: linear-gradient(
+						180deg,
+						rgba(160, 25, 205, 0.7) 0%,
+						rgba(0, 40, 180, 0.7) 100%
+					),
+					url('../img/mywork/minipeopleinthejungle.png');
+				background-size: cover;
+			}
+			&.kitchen {
+				background: linear-gradient(
+						180deg,
+						rgba(160, 25, 205, 0.7) 0%,
+						rgba(0, 40, 180, 0.7) 100%
+					),
+					url('../img/mywork/kitchen.png');
+				background-size: cover;
+			}
+			&.portfolios {
+				background: linear-gradient(
+						180deg,
+						rgba(160, 25, 205, 0.7) 0%,
+						rgba(0, 40, 180, 0.7) 100%
+					),
+					url('../img/mywork/forest.png');
+				background-size: cover;
+			}
+			&.first {
+				top: 10vh;
+				height: 8vh;
+				width: 8vw;
+				margin-left: 14vw;
+				font-size: 0.5vw;
+			}
+			&.second {
+				top: 20vh;
+				height: 11vh;
+				width: 11vw;
+				margin-left: 7vw;
+				z-index: 1;
+				font-size: 0.8vw;
+			}
+			&.third {
+				top: 33vh;
+				height: 16vh;
+				width: 16vw;
+				z-index: 2;
+				font-size: 1vw;
+			}
+			&.fourth {
+				top: 51vh;
+				height: 11vh;
+				width: 11vw;
+				margin-right: 7vw;
+				z-index: 1;
+				font-size: 0.8vw;
+			}
+			&.fifth {
+				top: 64vh;
+				height: 8vh;
+				width: 8vw;
+				margin-right: 14vw;
+				font-size: 0.6vw;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
 	}
 }

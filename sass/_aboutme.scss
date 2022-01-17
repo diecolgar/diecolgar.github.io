@@ -204,7 +204,7 @@
 		}
 		&.opened {
 			// cursor: pointer;
-			transform: translateX(10vw) !important;
+			transform: translateX(12vw) !important;
 			.arrow {
 				background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
 				&.up {
@@ -270,7 +270,8 @@
 			img {
 				width: 3vw;
 				position: relative;
-				left: 7vw;
+				top: 5vh;
+				left: 6vw;
 			}
 			&.one {
 				opacity: 1;
@@ -305,6 +306,17 @@
 				transition: 0.5s;
 			}
 		}
+	}
+	.scrolldown {
+		color: white;
+		position: absolute;
+		top: 80vh;
+		left: 90vw;
+		width: 30vh;
+		opacity: 0;
+		transform: rotate(-90deg) translateX(30vh);
+		font-size: 0.9vw;
+		letter-spacing: 2px;
 	}
 	&.active {
 		.title {
@@ -357,6 +369,12 @@
 		.mystorybutton {
 			transform: translateX(0);
 			opacity: 1;
+		}
+		.scrolldown {
+			transform: translateX(0) rotate(-90deg);
+			opacity: 1;
+			transition: 1s;
+			transition-delay: 2s;
 		}
 	}
 }

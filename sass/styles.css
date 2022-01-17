@@ -188,7 +188,7 @@ nav.hidden .left {
   color: white;
   position: absolute;
   top: 89vh;
-  left: 1.4vw;
+  left: 2vw;
   opacity: 0;
   -webkit-transform: rotate(-90deg) translateX(30vh);
           transform: rotate(-90deg) translateX(30vh);
@@ -518,8 +518,8 @@ nav.hidden .left {
 }
 
 .aboutme .mystorybutton.opened {
-  -webkit-transform: translateX(10vw) !important;
-          transform: translateX(10vw) !important;
+  -webkit-transform: translateX(12vw) !important;
+          transform: translateX(12vw) !important;
 }
 
 .aboutme .mystorybutton.opened .arrow {
@@ -610,7 +610,8 @@ nav.hidden .left {
 .aboutme .mystory .story img {
   width: 3vw;
   position: relative;
-  left: 7vw;
+  top: 5vh;
+  left: 6vw;
 }
 
 .aboutme .mystory .story.one {
@@ -655,6 +656,19 @@ nav.hidden .left {
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.aboutme .scrolldown {
+  color: white;
+  position: absolute;
+  top: 80vh;
+  left: 90vw;
+  width: 30vh;
+  opacity: 0;
+  -webkit-transform: rotate(-90deg) translateX(30vh);
+          transform: rotate(-90deg) translateX(30vh);
+  font-size: 0.9vw;
+  letter-spacing: 2px;
 }
 
 .aboutme.active .title {
@@ -728,10 +742,29 @@ nav.hidden .left {
   opacity: 1;
 }
 
+.aboutme.active .scrolldown {
+  -webkit-transform: translateX(0) rotate(-90deg);
+          transform: translateX(0) rotate(-90deg);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
 .mywork {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.mywork .title {
+  position: relative;
+  top: 15vh;
+  left: 10vw;
+  color: white;
+  font-size: 7vw;
   -webkit-transform: translateY(-20vh);
           transform: translateY(-20vh);
   opacity: 0;
@@ -739,18 +772,141 @@ nav.hidden .left {
   transition: 0.8s;
 }
 
-.mywork div {
-  position: relative;
-  top: 15vh;
-  left: 10vw;
-  color: white;
-  font-size: 7vw;
-}
-
-.mywork.active {
+.mywork.active .title {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+  width: 40vw;
+}
+
+.mywork .displayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65vw;
+  height: 100vh;
+}
+
+.mywork .container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 66vw;
+  width: 35vw;
+  height: 100vh;
+  margin-top: 20vh;
+}
+
+.mywork .container .item {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+.mywork .container .item img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.mywork .container .item.valorantreact {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 25, 205, 0.7)), to(rgba(0, 40, 180, 0.7))), url("../img/mywork/valorantreact.png");
+  background: linear-gradient(180deg, rgba(160, 25, 205, 0.7) 0%, rgba(0, 40, 180, 0.7) 100%), url("../img/mywork/valorantreact.png");
+  background-size: cover;
+}
+
+.mywork .container .item.ios {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 25, 205, 0.7)), to(rgba(0, 40, 180, 0.7))), url("../img/mywork/iosdesigns.png");
+  background: linear-gradient(180deg, rgba(160, 25, 205, 0.7) 0%, rgba(0, 40, 180, 0.7) 100%), url("../img/mywork/iosdesigns.png");
+  background-size: cover;
+}
+
+.mywork .container .item.minipeople {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 25, 205, 0.7)), to(rgba(0, 40, 180, 0.7))), url("../img/mywork/minipeopleinthejungle.png");
+  background: linear-gradient(180deg, rgba(160, 25, 205, 0.7) 0%, rgba(0, 40, 180, 0.7) 100%), url("../img/mywork/minipeopleinthejungle.png");
+  background-size: cover;
+}
+
+.mywork .container .item.kitchen {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 25, 205, 0.7)), to(rgba(0, 40, 180, 0.7))), url("../img/mywork/kitchen.png");
+  background: linear-gradient(180deg, rgba(160, 25, 205, 0.7) 0%, rgba(0, 40, 180, 0.7) 100%), url("../img/mywork/kitchen.png");
+  background-size: cover;
+}
+
+.mywork .container .item.portfolios {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 25, 205, 0.7)), to(rgba(0, 40, 180, 0.7))), url("../img/mywork/forest.png");
+  background: linear-gradient(180deg, rgba(160, 25, 205, 0.7) 0%, rgba(0, 40, 180, 0.7) 100%), url("../img/mywork/forest.png");
+  background-size: cover;
+}
+
+.mywork .container .item.first {
+  top: 10vh;
+  height: 8vh;
+  width: 8vw;
+  margin-left: 14vw;
+  font-size: 0.5vw;
+}
+
+.mywork .container .item.second {
+  top: 20vh;
+  height: 11vh;
+  width: 11vw;
+  margin-left: 7vw;
+  z-index: 1;
+  font-size: 0.8vw;
+}
+
+.mywork .container .item.third {
+  top: 33vh;
+  height: 16vh;
+  width: 16vw;
+  z-index: 2;
+  font-size: 1vw;
+}
+
+.mywork .container .item.fourth {
+  top: 51vh;
+  height: 11vh;
+  width: 11vw;
+  margin-right: 7vw;
+  z-index: 1;
+  font-size: 0.8vw;
+}
+
+.mywork .container .item.fifth {
+  top: 64vh;
+  height: 8vh;
+  width: 8vw;
+  margin-right: 14vw;
+  font-size: 0.6vw;
+}
+
+.mywork .container .item:hover {
+  cursor: pointer;
 }
 
 .contact {
@@ -760,6 +916,7 @@ nav.hidden .left {
   -webkit-transform: translateY(-20vh);
           transform: translateY(-20vh);
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
@@ -776,6 +933,7 @@ nav.hidden .left {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 800px) {
