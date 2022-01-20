@@ -188,11 +188,11 @@ nav.hidden .left {
   color: white;
   position: absolute;
   top: 89vh;
-  left: 2vw;
+  left: 1vw;
   opacity: 0;
   -webkit-transform: rotate(-90deg) translateX(30vh);
           transform: rotate(-90deg) translateX(30vh);
-  font-size: 1.6w;
+  font-size: 1vw;
   letter-spacing: 2px;
 }
 
@@ -259,7 +259,7 @@ nav.hidden .left {
   height: 100vh;
   -webkit-transition: 1s;
   transition: 1s;
-  clip: rect(0, 4.4vw, 100vh, 0);
+  clip: rect(0, 4vw, 100vh, 0);
   z-index: -10;
 }
 
@@ -342,6 +342,7 @@ nav.hidden .left {
 
 .aboutme .aboutitems .item .left .up {
   font-weight: 500;
+  font-size: 1.9vh;
   background: -webkit-gradient(linear, right top, left top, from(#ec4a21), to(#b24ae2));
   background: linear-gradient(to left, #ec4a21 0%, #b24ae2 100%);
   background-clip: text;
