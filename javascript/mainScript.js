@@ -44,7 +44,6 @@ function activateSlide() {
     section.forEach((section, id) => {
         section.classList.remove('active')
         if (currentSlide >= id) {
-            // console.log(id)
             section.classList.add('active')
             id == 0 ? nav.classList.add('hidden') : nav.classList.remove('hidden')
         }

@@ -11,13 +11,6 @@
 		opacity: 0;
 		transition: 0.8s;
 	}
-	&.active {
-		.title {
-			transform: translateY(0);
-			opacity: 1;
-			width: 40vw;
-		}
-	}
 	.displayer {
 		position: absolute;
 		display: flex;
@@ -27,22 +20,63 @@
 		left: 0;
 		width: 65vw;
 		height: 100vh;
-		div {
-			visibility: hidden;
+		opacity: 0;
+		transition: 0.5s;
+		transform: translateY(5vw);
+		.element {
 			position: absolute;
 			width: 20vw;
 			height: 20vh;
 			color: white;
+			opacity: 0;
 			&.active {
-				visibility: visible;
+				z-index: 50;
+				opacity: 1;
+				transition: 1s;
+				.mobiledisplay {
+					.firstim {
+						transform: translateY(0vw);
+					}
+					.secondim {
+						transform: translateY(0vw);
+					}
+				}
+			}
+			.mobiledisplay {
+				display: flex;
+				position: relative;
+				left: 24vw;
+				top: -28vh;
+				width: 30vw;
+				height: 20vw;
+				.firstim {
+					position: relative;
+					top: 1vw;
+					max-width: 10vw;
+					max-height: 17vw;
+					transform: translateY(-10vw);
+					transition: 1s;
+				}
+				.secondim {
+					top: -1vw;
+					position: relative;
+					max-width: 10vw;
+					max-height: 17vw;
+					transform: translateY(-10vw);
+					transition: 1s;
+					// transition-delay: 0.1s;
+				}
+				.backim {
+					width: 40vw;
+					height: 30vw;
+					position: relative;
+					left: -23.5vw;
+					top: -5.5vw;
+					z-index: -5;
+					transition: 2s;
+				}
 			}
 		}
-		// .ios {
-
-		// }
-		// .minipeople {
-
-		// }
 	}
 	.container {
 		position: absolute;
@@ -60,11 +94,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			text-align: center;
 			color: rgb(255, 255, 255);
 			text-transform: uppercase;
 			border-radius: 0.2rem;
 			transition: ease-in-out 1s;
-			opacity: 0.4;
+			opacity: 0.3;
 			img {
 				width: 100%;
 				height: 100%;
@@ -135,7 +170,7 @@
 				height: 16vh;
 				width: 16vw;
 				z-index: 2;
-				font-size: 0.75vw;
+				font-size: 0.85vw;
 				opacity: 1;
 			}
 			&.fourth {
@@ -156,6 +191,19 @@
 			&:hover {
 				cursor: pointer;
 			}
+		}
+	}
+	&.active {
+		.title {
+			transform: translateY(0);
+			opacity: 1;
+			width: 40vw;
+		}
+		.displayer {
+			opacity: 1;
+			transition: 1.5s;
+			transition-delay: 0.3s;
+			transform: translateY(0);
 		}
 	}
 }

@@ -24,7 +24,7 @@
 		top: 47vh;
 		left: 63vw;
 		width: 30vw;
-		font-size: 6vh;
+		font-size: 3.2vw;
 		font-weight: 500;
 		opacity: 0;
 		transform: translateX(20vw);
@@ -32,14 +32,6 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-	}
-	.wire {
-		position: absolute;
-		top: 100vh;
-		left: 0;
-		width: 100vw;
-		height: 0vh;
-		transition: 1s;
 	}
 	.scrolldown {
 		color: white;
@@ -73,11 +65,5 @@
 			transition: 1s;
 			transition-delay: 1s;
 		}
-		// .wire {
-		// 	top: 20vh;
-		// 	height: 80vh;
-		// 	transition: 1s;
-		// 	transition-delay: 0.5s;
-		// }
 	}
 }

@@ -162,7 +162,7 @@ nav.hidden .left {
   top: 47vh;
   left: 63vw;
   width: 30vw;
-  font-size: 6vh;
+  font-size: 3.2vw;
   font-weight: 500;
   opacity: 0;
   -webkit-transform: translateX(20vw);
@@ -172,16 +172,6 @@ nav.hidden .left {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.home .wire {
-  position: absolute;
-  top: 100vh;
-  left: 0;
-  width: 100vw;
-  height: 0vh;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .home .scrolldown {
@@ -777,13 +767,6 @@ nav.hidden .left {
   transition: 0.8s;
 }
 
-.mywork.active .title {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-  width: 40vw;
-}
-
 .mywork .displayer {
   position: absolute;
   display: -webkit-box;
@@ -799,18 +782,80 @@ nav.hidden .left {
   left: 0;
   width: 65vw;
   height: 100vh;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(5vw);
+          transform: translateY(5vw);
 }
 
-.mywork .displayer div {
-  visibility: hidden;
+.mywork .displayer .element {
   position: absolute;
   width: 20vw;
   height: 20vh;
   color: white;
+  opacity: 0;
 }
 
-.mywork .displayer div.active {
-  visibility: visible;
+.mywork .displayer .element.active {
+  z-index: 50;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.mywork .displayer .element.active .mobiledisplay .firstim {
+  -webkit-transform: translateY(0vw);
+          transform: translateY(0vw);
+}
+
+.mywork .displayer .element.active .mobiledisplay .secondim {
+  -webkit-transform: translateY(0vw);
+          transform: translateY(0vw);
+}
+
+.mywork .displayer .element .mobiledisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 24vw;
+  top: -28vh;
+  width: 30vw;
+  height: 20vw;
+}
+
+.mywork .displayer .element .mobiledisplay .firstim {
+  position: relative;
+  top: 1vw;
+  max-width: 10vw;
+  max-height: 17vw;
+  -webkit-transform: translateY(-10vw);
+          transform: translateY(-10vw);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.mywork .displayer .element .mobiledisplay .secondim {
+  top: -1vw;
+  position: relative;
+  max-width: 10vw;
+  max-height: 17vw;
+  -webkit-transform: translateY(-10vw);
+          transform: translateY(-10vw);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.mywork .displayer .element .mobiledisplay .backim {
+  width: 40vw;
+  height: 30vw;
+  position: relative;
+  left: -23.5vw;
+  top: -5.5vw;
+  z-index: -5;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .mywork .container {
@@ -846,12 +891,13 @@ nav.hidden .left {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   color: white;
   text-transform: uppercase;
   border-radius: 0.2rem;
   -webkit-transition: ease-in-out 1s;
   transition: ease-in-out 1s;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .mywork .container .item img {
@@ -912,7 +958,7 @@ nav.hidden .left {
   height: 16vh;
   width: 16vw;
   z-index: 2;
-  font-size: 0.75vw;
+  font-size: 0.85vw;
   opacity: 1;
 }
 
@@ -935,6 +981,23 @@ nav.hidden .left {
 
 .mywork .container .item:hover {
   cursor: pointer;
+}
+
+.mywork.active .title {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  width: 40vw;
+}
+
+.mywork.active .displayer {
+  opacity: 1;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .contact {
@@ -1042,7 +1105,7 @@ nav.hidden .left {
 }
 
 .displayable-menu .menu-button {
-  font-size: 10vh;
+  font-size: 9vh;
   font-weight: 500;
   text-transform: uppercase;
   margin: 1rem 0;

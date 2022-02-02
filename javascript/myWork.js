@@ -17,7 +17,6 @@ function displayCurrentItem() {
 
     displayableItems.forEach( dispItem => {
         dispItem.classList.remove('active')
-        console.log('apdjoasjdjoa')
     })
 
     myWorkItems.forEach((item,id) => {
