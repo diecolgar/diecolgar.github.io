@@ -25,7 +25,7 @@
 	.aboutitems {
 		position: absolute;
 		top: 43vh;
-		left: 22vw;
+		left: 23vw;
 		width: 25vw;
 		height: 40vh;
 		color: white;
@@ -83,19 +83,19 @@
 			&.origin {
 				transform: translateX(-5vw);
 				.right {
-					height: 45%;
+					height: 35%;
 				}
 			}
 			&.studies {
 				transform: translateX(-10vw);
 				.right {
-					height: 30%;
+					height: 35%;
 				}
 			}
 			&.work {
 				transform: translateX(-15vw);
 				.right {
-					height: 30%;
+					height: 35%;
 				}
 			}
 		}
