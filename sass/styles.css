@@ -772,22 +772,27 @@ nav.hidden .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   top: 71vh;
-  left: 0vw;
+  left: 5vw;
   height: 13vh;
+  width: 90vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mywork .myworkselectables .selectable {
-  margin-right: 2vw;
-  width: 12vw;
+  width: 11.5vw;
   height: 13vh;
   border-radius: 0.4rem;
-  background: linear-gradient(123deg, #d83ce2 12%, #0062b0 100%);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  background: linear-gradient(123deg, black 12%, black 100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mywork .myworkselectables .selectable:hover {
+  cursor: pointer;
   opacity: 1 !important;
 }
 
@@ -804,11 +809,184 @@ nav.hidden .left {
   color: white;
 }
 
+.mywork .myworkselectables .selectable:hover {
+  cursor: pointer;
+  width: 14vw;
+  height: 16vh;
+  -webkit-transform: translateY(-1.5vh);
+          transform: translateY(-1.5vh);
+}
+
+.mywork .myworkselectables .selectable.fir {
+  background-image: url("../img/mywork/indra.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.fir:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables .selectable.thi {
+  background-image: url("../img/mywork/minipeopleinthejungle.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.thi:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables .selectable.fou {
+  background-image: url("../img/mywork/iosdesigns.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.fou:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables .selectable.six {
+  background-image: url("../img/mywork/esker.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.six:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables.minimized {
+  top: 90vh;
+  left: 40vw;
+  width: 20vw;
+  height: 4vh;
+  z-index: 15;
+}
+
+.mywork .myworkselectables.minimized .selectable {
+  width: 2vw;
+  height: 2vh;
+  background: rgba(255, 255, 255, 0);
+  border: 0.2rem solid #FFFFFF;
+  border-radius: 0.4rem;
+  -webkit-transition: 0,5s;
+  transition: 0,5s;
+}
+
+.mywork .myworkselectables.minimized .selectable:hover {
+  cursor: pointer;
+  width: 3vw;
+  height: 3vh;
+  -webkit-transform: translateY(-0.5vh);
+          transform: translateY(-0.5vh);
+}
+
+.mywork .myworkselectables.minimized .selectable.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.mywork .workdisplayed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mywork .workdisplayed.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mywork .workdisplayed.fir {
+  background-image: url("../img/mywork/indra.png");
+  background-size: cover;
+}
+
+.mywork .workdisplayed.thi {
+  background-image: url("../img/mywork/minipeopleinthejungle.png");
+  background-size: cover;
+}
+
+.mywork .workdisplayed.fou {
+  background-image: url("../img/mywork/iosdesigns.png");
+  background-size: cover;
+}
+
+.mywork .workdisplayed.six {
+  background-image: url("../img/mywork/esker.png");
+  background-size: cover;
+}
+
 .mywork.active .title {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
   width: 40vw;
+}
+
+.mywork .myworkcloser {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 93.5vh;
+  left: 48.5vw;
+  width: 3vw;
+  height: 3vw;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 15;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.mywork .myworkcloser.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mywork .myworkcloser:hover {
+  cursor: pointer;
+}
+
+.mywork .myworkcloser:hover .stick.one {
+  -webkit-transform: translateX(0.75vw) rotate(225deg);
+          transform: translateX(0.75vw) rotate(225deg);
+}
+
+.mywork .myworkcloser:hover .stick.two {
+  -webkit-transform: translateX(-0.75vw) rotate(-225deg);
+          transform: translateX(-0.75vw) rotate(-225deg);
+}
+
+.mywork .myworkcloser .stick {
+  width: 2vw;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.mywork .myworkcloser .stick.one {
+  -webkit-transform: translateX(0.75vw) rotate(45deg);
+          transform: translateX(0.75vw) rotate(45deg);
+}
+
+.mywork .myworkcloser .stick.two {
+  -webkit-transform: translateX(-0.75vw) rotate(-45deg);
+          transform: translateX(-0.75vw) rotate(-45deg);
 }
 
 .contact {

@@ -14,21 +14,24 @@
 	.myworkselectables {
 		position: absolute;
 		display: flex;
+		justify-content: space-around;
 		top: 71vh;
-		left: 0vw;
+		left: 5vw;
 		height: 13vh;
+		width: 90vw;
+		transition: 0.5s;
 		.selectable {
-			margin-right: 2vw;
-			width: 12vw;
+			width: 11.5vw;
 			height: 13vh;
 			border-radius: 0.4rem;
 			background: linear-gradient(
 				123deg,
-				rgba(216, 60, 226, 1) 12%,
-				rgba(0, 98, 176, 1) 100%
+				rgb(0, 0, 0) 12%,
+				rgb(0, 0, 0) 100%
 			);
-			transition: 0.2s;
+			transition: 0.5s;
 			&:hover {
+				cursor: pointer;
 				opacity: 1 !important;
 			}
 			p {
@@ -39,6 +42,99 @@
 				position: relative;
 				color: white;
 			}
+			&:hover {
+				cursor: pointer;
+				width: 14vw;
+				height: 16vh;
+				transform: translateY(-1.5vh);
+			}
+			&.fir {
+				background-image: url('../img/mywork/indra.png');
+				background-size: cover;
+				background-position: center;
+				&:hover {
+				opacity: 1;
+				}
+			}
+			&.thi {
+				background-image: url('../img/mywork/minipeopleinthejungle.png');
+				background-size: cover;
+				background-position: center;
+				&:hover {
+				opacity: 1;
+				}
+			}
+			&.fou {
+				background-image: url('../img/mywork/iosdesigns.png');
+				background-size: cover;
+				background-position: center;
+				&:hover {
+				opacity: 1;
+				}
+			}
+			&.six {
+				background-image: url('../img/mywork/esker.png');
+				background-size: cover;
+				background-position: center;
+				&:hover {
+				opacity: 1;
+				}
+			}
+		}
+		&.minimized {
+			top: 90vh;
+			left: 40vw;
+			width: 20vw;
+			height: 4vh;
+			z-index: 15;
+			.selectable {
+				width: 2vw;
+				height: 2vh;
+				background: rgba(255, 255, 255, 0);
+				border: 0.2rem solid #FFFFFF;
+				border-radius: 0.4rem;
+				transition: 0,5s;
+				&:hover {
+					cursor: pointer;
+					width: 3vw;
+					height: 3vh;
+					transform: translateY(-0.5vh);
+				}
+				&.active {
+					background: rgba(255, 255, 255, 0.9);
+				}
+			}
+		}
+	}
+	.workdisplayed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100vw;
+		height: 100vh;
+		transition: 1s;
+		opacity: 0;
+		visibility: hidden;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
+		&.fir {
+			background-image: url('../img/mywork/indra.png');
+			background-size: cover;
+		}
+		&.thi {
+			background-image: url('../img/mywork/minipeopleinthejungle.png');
+			background-size: cover;
+		}
+		&.fou {
+			background-image: url('../img/mywork/iosdesigns.png');
+			background-size: cover;
+		}
+		&.six {
+			background-image: url('../img/mywork/esker.png');
+			background-size: cover;
 		}
 	}
 	&.active {
@@ -46,6 +142,47 @@
 			transform: translateY(0);
 			opacity: 1;
 			width: 40vw;
+		}
+	}
+	.myworkcloser {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 93.5vh;
+		left: 48.5vw;
+		width: 3vw;
+		height: 3vw;
+		background-color: rgba(0, 0, 0, 0);
+		z-index: 15;
+		visibility: hidden;
+		transition: 0.5s;
+		opacity: 0;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
+		&:hover {
+			cursor: pointer;
+			.stick {
+				&.one {
+					transform: translateX(0.75vw) rotate(225deg);
+				}
+				&.two {
+					transform: translateX(-0.75vw) rotate(-225deg);
+				}	
+			}
+		}
+		.stick {
+			width: 2vw;
+			height: 3px;
+			background-color: white;
+			transition: 0.5s;
+			&.one {
+				transform: translateX(0.75vw) rotate(45deg);
+			}
+			&.two {
+				transform: translateX(-0.75vw) rotate(-45deg);
+			}
 		}
 	}
 }
