@@ -47,9 +47,11 @@ function activateSlide() {
             section.classList.add('active')
             // Events that occur on slide activation, depending on the current page
             id == 0 ? nav.classList.add('hidden') : nav.classList.remove('hidden')
+            // My work tab
             id != 2 ? myworkselectablecontainer.classList.remove("minimized") : ""
             id != 2 ? myworkselectablecontainer.style.opacity = 0 : myworkselectablecontainer.style.opacity = 1
             id != 2 ? myworkcloser.classList.remove("active") : ""
+            id != 2 ? myworktitle.style.opacity = 1 : ""
             id != 2 ? myworkdisplayables.forEach((displayable) => {displayable.classList.remove('active')}) : ""
         }
     });

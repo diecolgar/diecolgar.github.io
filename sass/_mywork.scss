@@ -49,6 +49,14 @@
 				transform: translateY(-1.5vh);
 			}
 			&.fir {
+				background-image: url('../img/mywork/reactapps_small.png');
+				background-size: cover;
+				background-position: center;
+				&:hover {
+				opacity: 1;
+				}
+			}
+			&.sec {
 				background-image: url('../img/mywork/indra.png');
 				background-size: cover;
 				background-position: center;
@@ -65,7 +73,15 @@
 				}
 			}
 			&.fou {
-				background-image: url('../img/mywork/iosdesigns.png');
+				background-image: url('../img/mywork/dcback_small.png');
+				background-size: cover;
+				background-position: center;
+				&:hover {
+				opacity: 1;
+				}
+			}
+			&.fif {
+				background-image: url('../img/mywork/iosdesigns_small_2.png');
 				background-size: cover;
 				background-position: center;
 				&:hover {
@@ -82,7 +98,7 @@
 			}
 		}
 		&.minimized {
-			top: 90vh;
+			top: 95vh;
 			left: 40vw;
 			width: 20vw;
 			height: 4vh;
@@ -91,7 +107,7 @@
 				width: 2vw;
 				height: 2vh;
 				background: rgba(255, 255, 255, 0);
-				border: 0.2rem solid #FFFFFF;
+				border: 0.15rem solid #FFFFFF;
 				border-radius: 0.4rem;
 				transition: 0,5s;
 				&:hover {
@@ -121,6 +137,10 @@
 			opacity: 1;
 		}
 		&.fir {
+			background-image: url('../img/mywork/reactapps_small.png');
+			background-size: cover;
+		}
+		&.sec {
 			background-image: url('../img/mywork/indra.png');
 			background-size: cover;
 		}
@@ -129,6 +149,10 @@
 			background-size: cover;
 		}
 		&.fou {
+			background-image: url('../img/mywork/dcback_small.png');
+			background-size: cover;
+		}
+		&.fif {
 			background-image: url('../img/mywork/iosdesigns.png');
 			background-size: cover;
 		}
@@ -148,8 +172,8 @@
 		position: absolute;
 		display: flex;
 		align-items: center;
-		top: 93.5vh;
-		left: 48.5vw;
+		top: 10vh;
+		left: 79vw;
 		width: 3vw;
 		height: 3vw;
 		background-color: rgba(0, 0, 0, 0);

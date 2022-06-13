@@ -268,7 +268,7 @@ nav.hidden .left {
   display: flex;
   position: relative;
   top: -33vh;
-  left: 22.3vw;
+  left: 22.6vw;
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
@@ -304,7 +304,7 @@ nav.hidden .left {
 }
 
 .aboutme .aboutitems .item .right {
-  margin-left: 2vw;
+  margin-left: 1.3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,7 +388,7 @@ nav.hidden .left {
   display: flex;
   position: relative;
   top: 23vh;
-  left: 2vw;
+  left: 1.9vw;
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
@@ -818,12 +818,22 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.fir {
-  background-image: url("../img/mywork/indra.png");
+  background-image: url("../img/mywork/reactapps_small.png");
   background-size: cover;
   background-position: center;
 }
 
 .mywork .myworkselectables .selectable.fir:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables .selectable.sec {
+  background-image: url("../img/mywork/indra.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.sec:hover {
   opacity: 1;
 }
 
@@ -838,12 +848,22 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.fou {
-  background-image: url("../img/mywork/iosdesigns.png");
+  background-image: url("../img/mywork/dcback_small.png");
   background-size: cover;
   background-position: center;
 }
 
 .mywork .myworkselectables .selectable.fou:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables .selectable.fif {
+  background-image: url("../img/mywork/iosdesigns_small_2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.fif:hover {
   opacity: 1;
 }
 
@@ -858,7 +878,7 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables.minimized {
-  top: 90vh;
+  top: 95vh;
   left: 40vw;
   width: 20vw;
   height: 4vh;
@@ -869,7 +889,7 @@ nav.hidden .left {
   width: 2vw;
   height: 2vh;
   background: rgba(255, 255, 255, 0);
-  border: 0.2rem solid #FFFFFF;
+  border: 0.15rem solid #FFFFFF;
   border-radius: 0.4rem;
   -webkit-transition: 0,5s;
   transition: 0,5s;
@@ -906,6 +926,11 @@ nav.hidden .left {
 }
 
 .mywork .workdisplayed.fir {
+  background-image: url("../img/mywork/reactapps_small.png");
+  background-size: cover;
+}
+
+.mywork .workdisplayed.sec {
   background-image: url("../img/mywork/indra.png");
   background-size: cover;
 }
@@ -916,6 +941,11 @@ nav.hidden .left {
 }
 
 .mywork .workdisplayed.fou {
+  background-image: url("../img/mywork/dcback_small.png");
+  background-size: cover;
+}
+
+.mywork .workdisplayed.fif {
   background-image: url("../img/mywork/iosdesigns.png");
   background-size: cover;
 }
@@ -940,8 +970,8 @@ nav.hidden .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 93.5vh;
-  left: 48.5vw;
+  top: 10vh;
+  left: 79vw;
   width: 3vw;
   height: 3vw;
   background-color: rgba(0, 0, 0, 0);
