@@ -818,7 +818,7 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.fir {
-  background-image: url("../img/mywork/reactapps_small.png");
+  background-image: url("../img/mywork/small_react.png");
   background-size: cover;
   background-position: center;
 }
@@ -828,7 +828,7 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.sec {
-  background-image: url("../img/mywork/indra.png");
+  background-image: url("../img/mywork/frame_underdevelopment.png");
   background-size: cover;
   background-position: center;
 }
@@ -848,7 +848,7 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.fou {
-  background-image: url("../img/mywork/dcback_small.png");
+  background-image: url("../img/mywork/small_mybrand.png");
   background-size: cover;
   background-position: center;
 }
@@ -858,7 +858,7 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.fif {
-  background-image: url("../img/mywork/iosdesigns_small_2.png");
+  background-image: url("../img/mywork/small_iosdesigns.png");
   background-size: cover;
   background-position: center;
 }
@@ -868,12 +868,22 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.six {
-  background-image: url("../img/mywork/esker.png");
+  background-image: url("../img/mywork/frame_underdevelopment.png");
   background-size: cover;
   background-position: center;
 }
 
 .mywork .myworkselectables .selectable.six:hover {
+  opacity: 1;
+}
+
+.mywork .myworkselectables .selectable.sev {
+  background-image: url("../img/mywork/small_animalesparticulares.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mywork .myworkselectables .selectable.sev:hover {
   opacity: 1;
 }
 
@@ -926,32 +936,37 @@ nav.hidden .left {
 }
 
 .mywork .workdisplayed.fir {
-  background-image: url("../img/mywork/reactapps_small.png");
+  background-image: url("../img/mywork/frame_react.png");
   background-size: cover;
 }
 
 .mywork .workdisplayed.sec {
-  background-image: url("../img/mywork/indra.png");
+  background-image: url("../img/mywork/frame_underdevelopment.png");
   background-size: cover;
 }
 
 .mywork .workdisplayed.thi {
-  background-image: url("../img/mywork/minipeopleinthejungle.png");
+  background-image: url("../img/mywork/frame_minipeopleinthejungle.png");
   background-size: cover;
 }
 
 .mywork .workdisplayed.fou {
-  background-image: url("../img/mywork/dcback_small.png");
+  background-image: url("../img/mywork/frame_myportfolio.png");
   background-size: cover;
 }
 
 .mywork .workdisplayed.fif {
-  background-image: url("../img/mywork/iosdesigns.png");
+  background-image: url("../img/mywork/frame_iosdesigns.png");
   background-size: cover;
 }
 
 .mywork .workdisplayed.six {
-  background-image: url("../img/mywork/esker.png");
+  background-image: url("../img/mywork/frame_underdevelopment.png");
+  background-size: cover;
+}
+
+.mywork .workdisplayed.sev {
+  background-image: url("../img/mywork/frame_animalesparticulares.png");
   background-size: cover;
 }
 
