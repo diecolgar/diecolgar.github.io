@@ -4,7 +4,7 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.8s;
-	div {
+	.title {
 		position: relative;
 		top: 60vh;
 		left: 48vw;
@@ -15,5 +15,19 @@
 		transform: translateY(0);
 		opacity: 1;
 		visibility: visible;
+	}
+	.email {
+		position: absolute;
+		top: 77vh;
+		left: 57vw;
+		color: white;
+		user-select: text;
+	}
+	.number {
+		position: absolute;
+		top: 80vh;
+		left: 57vw;
+		color: white;
+		user-select: text;
 	}
 }

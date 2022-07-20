@@ -760,11 +760,11 @@ nav.hidden .left {
   left: 35vw;
   color: white;
   font-size: 7vw;
-  -webkit-transform: translateY(-20vh);
-          transform: translateY(-20vh);
+  -webkit-transform: translateY(-40vh);
+          transform: translateY(-40vh);
   opacity: 0;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .mywork .myworkselectables {
@@ -1046,7 +1046,7 @@ nav.hidden .left {
   transition: 0.8s;
 }
 
-.contact div {
+.contact .title {
   position: relative;
   top: 60vh;
   left: 48vw;
@@ -1059,6 +1059,28 @@ nav.hidden .left {
           transform: translateY(0);
   opacity: 1;
   visibility: visible;
+}
+
+.contact .email {
+  position: absolute;
+  top: 77vh;
+  left: 57vw;
+  color: white;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.contact .number {
+  position: absolute;
+  top: 80vh;
+  left: 57vw;
+  color: white;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 @media (max-width: 800px) {
