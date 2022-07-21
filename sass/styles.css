@@ -868,7 +868,7 @@ nav.hidden .left {
 }
 
 .mywork .myworkselectables .selectable.six {
-  background-image: url("../img/mywork/frame_underdevelopment.png");
+  background-image: url("../img/mywork/small_metastars.png");
   background-size: cover;
   background-position: center;
 }
@@ -938,36 +938,75 @@ nav.hidden .left {
 .mywork .workdisplayed.fir {
   background-image: url("../img/mywork/frame_react.png");
   background-size: cover;
+  background-position: center;
 }
 
 .mywork .workdisplayed.sec {
   background-image: url("../img/mywork/frame_underdevelopment.png");
   background-size: cover;
+  background-position: center;
 }
 
 .mywork .workdisplayed.thi {
   background-image: url("../img/mywork/frame_minipeopleinthejungle.png");
   background-size: cover;
+  background-position: center;
 }
 
 .mywork .workdisplayed.fou {
   background-image: url("../img/mywork/frame_myportfolio.png");
   background-size: cover;
+  background-position: center;
 }
 
 .mywork .workdisplayed.fif {
   background-image: url("../img/mywork/frame_iosdesigns.png");
   background-size: cover;
+  background-position: center;
 }
 
 .mywork .workdisplayed.six {
-  background-image: url("../img/mywork/frame_underdevelopment.png");
+  background-image: url("../img/mywork/frame_metastars.png");
   background-size: cover;
+  background-position: center;
 }
 
 .mywork .workdisplayed.sev {
   background-image: url("../img/mywork/frame_animalesparticulares.png");
   background-size: cover;
+  background-position: center;
+}
+
+.mywork .workdisplayed .clickables {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 90vh;
+  left: 40vw;
+  width: 20vw;
+  height: 4vh;
+  opacity: 0.7;
+}
+
+.mywork .workdisplayed .clickables p {
+  color: white;
+  margin: 0 10px;
+  font-weight: 400;
+}
+
+.mywork .workdisplayed .clickables a {
+  height: 100%;
+}
+
+.mywork .workdisplayed .clickables a img {
+  height: 100%;
 }
 
 .mywork.active .title {

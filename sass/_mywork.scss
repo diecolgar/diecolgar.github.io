@@ -89,7 +89,7 @@
 				}
 			}
 			&.six {
-				background-image: url('../img/mywork/frame_underdevelopment.png');
+				background-image: url('../img/mywork/small_metastars.png');
 				background-size: cover;
 				background-position: center;
 				&:hover {
@@ -147,30 +147,59 @@
 		&.fir {
 			background-image: url('../img/mywork/frame_react.png');
 			background-size: cover;
+			background-position: center;
 		}
 		&.sec {
 			background-image: url('../img/mywork/frame_underdevelopment.png');
 			background-size: cover;
+			background-position: center;
 		}
 		&.thi {
 			background-image: url('../img/mywork/frame_minipeopleinthejungle.png');
 			background-size: cover;
+			background-position: center;
 		}
 		&.fou {
 			background-image: url('../img/mywork/frame_myportfolio.png');
 			background-size: cover;
+			background-position: center;
 		}
 		&.fif {
 			background-image: url('../img/mywork/frame_iosdesigns.png');
 			background-size: cover;
+			background-position: center;
 		}
 		&.six {
-			background-image: url('../img/mywork/frame_underdevelopment.png');
+			background-image: url('../img/mywork/frame_metastars.png');
 			background-size: cover;
+			background-position: center;
 		}
 		&.sev {
 			background-image: url('../img/mywork/frame_animalesparticulares.png');
 			background-size: cover;
+			background-position: center;
+		}
+		.clickables {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 90vh;
+			left: 40vw;
+			width: 20vw;
+			height: 4vh;
+			opacity: 0.7;
+			p {
+				color: white;
+				margin: 0 10px;
+				font-weight: 400;
+			}
+			a {
+				height: 100%;
+				img {
+					height: 100%;
+				}
+			}
 		}
 	}
 	&.active {

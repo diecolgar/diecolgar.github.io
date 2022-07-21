@@ -22,7 +22,7 @@ window.addEventListener('mousemove', function(event)
             selectable.style.opacity = 0.0;
         } else {
             // selectable.style.opacity = 0.5 - distance*0.002;
-            selectable.style.opacity = 0.5;
+            selectable.style.opacity = 0.65;
         }
     });
 })
