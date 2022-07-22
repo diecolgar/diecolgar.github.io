@@ -228,15 +228,22 @@ nav.hidden .left {
 }
 
 .aboutme .title {
-  -webkit-transform: translateY(-20vh);
-          transform: translateY(-20vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   opacity: 0;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
   position: relative;
   top: 15vh;
-  left: 10vw;
+  left: 0;
+  width: 100vw;
   color: white;
+  -webkit-transform: translateY(-20vh);
+          transform: translateY(-20vh);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   font-size: 14vh;
   z-index: 10;
 }
@@ -1457,8 +1464,8 @@ body.stop-transitions * {
 }
 
 .content {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../img/background.webp");
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/background.webp");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../img/backgroundddd2.png");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/backgroundddd2.png");
   background-size: cover;
   background-position: left top;
   -webkit-box-align: center;

@@ -2,13 +2,16 @@
 	display: flex;
 	position: relative;
 	.title {
-		transform: translateY(-20vh);
+		display: flex;
+		justify-content: center;
 		opacity: 0;
-		transition: 0.8s;
 		position: relative;
 		top: 15vh;
-		left: 10vw;
+		left: 0;
+		width: 100vw;
 		color: white;
+		transform: translateY(-20vh);
+		transition: 0.8s;
 		font-size: 14vh;
 		z-index: 10;
 	}
