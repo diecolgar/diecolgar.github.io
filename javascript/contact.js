@@ -1,5 +1,10 @@
-const clickme = document.querySelector(".contact .clickmecontainer")
+const clickmeimage = document.querySelector(".contact .clickmeimage")
+const clickmetext = document.querySelector(".contact .clickmetext")
 
-clickme.addEventListener('click', () => {
-    clickme.classList.add('active')
+clickmeimage.addEventListener('click', () => {
+    contact.classList.add('opened');
+})
+
+clickmetext.addEventListener('click', () => {
+    contact.classList.add('opened');
 })

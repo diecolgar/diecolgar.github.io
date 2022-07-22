@@ -52,6 +52,7 @@ function activateSlide() {
             id != 2 ? myworkselectablecontainer.style.opacity = 0 : myworkselectablecontainer.style.opacity = 1
             id != 2 ? myworkcloser.classList.remove("active") : ""
             id != 2 ? myworkdisplayables.forEach((displayable) => {displayable.classList.remove('active')}) : ""
+            id != 3 ? contact.classList.remove('opened') : ""
         }
     });
 }

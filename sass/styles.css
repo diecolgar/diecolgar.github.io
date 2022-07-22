@@ -1051,10 +1051,10 @@ nav.hidden .left {
 .mywork.active .wire.second {
   -webkit-clip-path: circle(86.2% at 56% 34%);
           clip-path: circle(86.2% at 56% 34%);
-  -webkit-transition: 4s;
-  transition: 4s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .mywork.active .title {
@@ -1132,10 +1132,20 @@ nav.hidden .left {
 }
 
 .contact .title {
-  position: relative;
-  top: 58vh;
-  left: 50vw;
-  height: 100vh;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+  top: 69vh;
+  left: 0;
+  width: 100vw;
   color: white;
   font-size: 14vh;
   -webkit-transition: 1s;
@@ -1160,15 +1170,42 @@ nav.hidden .left {
           clip-path: circle(0% at 8.5% 0);
 }
 
-.contact .clickmecontainer {
-  position: relative;
-  top: 77vh;
-  left: 37vw;
-  width: 4rem;
-  height: 4rem;
+.contact .clickmeimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-image: url(/img/contact/frame.png);
+  -webkit-clip-path: circle(4% at 50% 101%);
+          clip-path: circle(4% at 50% 101%);
 }
 
-.contact .clickmecontainer .clickmedisplay {
+.contact .clickmeimage:hover {
+  cursor: pointer;
+}
+
+.contact .clickmetext {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  left: 0;
+  top: 97vh;
+  font-size: 2vh;
+  letter-spacing: 0.2rem;
+  color: white;
+  width: 100vw;
+}
+
+.contact .clickmetext:hover {
+  cursor: pointer;
+}
+
+.contact .contactinfo {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1177,131 +1214,80 @@ nav.hidden .left {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  font-size: 2vh;
-  width: 100%;
-  height: 100%;
-  top: 0;
+  top: 30vh;
   left: 0;
-  background-image: url(/img/contact/clickme_alternativo.png);
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-  border: 0 solid black;
-  opacity: 0;
+  width: 100vw;
 }
 
-.contact .clickmecontainer .clickmedisplay .email {
+.contact .contactinfo .sphere {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2.5vh;
-  color: white;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
-  width: 10rem;
-  letter-spacing: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  width: 22rem;
+  height: 22rem;
+  background-color: black;
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.contact .contactinfo .sphere .dc {
+  width: 12rem;
+  height: 12rem;
+  background-image: url(/img/contact/DC_logo_LIGHT.jpg);
+  background-size: cover;
+  background-position: center;
   margin-top: 2rem;
 }
 
-.contact .clickmecontainer .clickmedisplay .number {
+.contact .contactinfo .sphere .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2.5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 20rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
   color: white;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
-  width: 10rem;
 }
 
-.contact .clickmecontainer .clickme {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  font-size: 2vh;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-image: url(/img/contact/clickme.png);
-  background-size: cover;
-  background-position: center;
-  -webkit-animation: rotate 10s infinite;
-          animation: rotate 10s infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+.contact .contactinfo .sphere .text::-moz-selection {
+  background: white;
+  color: #000000;
 }
 
-.contact .clickmecontainer .clickmelabel {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  font-size: 2vh;
-  letter-spacing: 4px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.contact .clickmecontainer.active:hover {
-  cursor: auto;
-}
-
-.contact .clickmecontainer.active .clickmedisplay {
-  width: 500%;
-  height: 500%;
-  top: -750%;
-  left: -225%;
-  -webkit-transition: 1s;
-  transition: 1s;
-  border: 1rem solid black;
-  opacity: 1;
-}
-
-.contact .clickmecontainer.active .clickmelabel {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.contact .clickmecontainer.active .clickme {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.contact .clickmecontainer:hover {
-  cursor: pointer;
+.contact .contactinfo .sphere .text::selection {
+  background: white;
+  color: #000000;
 }
 
 .contact.active .title {
@@ -1313,32 +1299,44 @@ nav.hidden .left {
 }
 
 .contact.active .wire {
-  -webkit-transition: 3s cubic-bezier(0.58, 0.56, 0.85, 0.26);
-  transition: 3s cubic-bezier(0.58, 0.56, 0.85, 0.26);
+  -webkit-transition: 4.5s;
+  transition: 4.5s;
   -webkit-clip-path: circle(100% at 8.5% 0);
           clip-path: circle(100% at 8.5% 0);
 }
 
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(70deg);
-            transform: rotate(70deg);
-  }
+.contact.active.opened .title {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  color: black;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
 }
 
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(70deg);
-            transform: rotate(70deg);
-  }
+.contact.active.opened .clickmeimage {
+  -webkit-clip-path: circle(100% at 50% 101%);
+          clip-path: circle(100% at 50% 101%);
+  cursor: default;
+}
+
+.contact.active.opened .clickmetext {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+  cursor: default;
+}
+
+.contact.active.opened .wire {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.contact.active.opened .contactinfo .sphere {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 10;
+  opacity: 1;
 }
 
 @media (max-width: 800px) {
