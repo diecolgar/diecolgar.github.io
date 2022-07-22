@@ -4,12 +4,34 @@
 	.title {
 		position: relative;
 		top: 40vh;
-		left: 35vw;
+		width: 100vw;
+		text-align: center;
+		left: 0;
 		color: white;
-		font-size: 7vw;
-		transform: translateY(-40vh);
+		font-size: 14vh;
+		transform: translateY(20vh);
 		opacity: 0;
+		transition: 2s;
+	}
+	.wire {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
 		transition: 1s;
+		&.first {
+			clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+			background-image: url(/img/mywork/wire1.png);
+			background-position: center;
+			background-size: cover;
+		}
+		&.second {
+			clip-path: circle(11.6% at 56% 34%);
+			background-image: url(/img/mywork/wire2.png);
+			background-position: center;
+			background-size: cover;
+		}
 	}
 	.myworkselectables {
 		position: absolute;
@@ -47,6 +69,8 @@
 				width: 14vw;
 				height: 16vh;
 				transform: translateY(-1.5vh);
+				background: rgb(255,255,255);
+				border: 2px solid rgb(255, 255, 255);
 			}
 			&.fir {
 				background-image: url('../img/mywork/small_react.png');
@@ -115,7 +139,7 @@
 				width: 2vw;
 				height: 2vh;
 				background: rgba(255, 255, 255, 0);
-				border: 0.15rem solid #FFFFFF;
+				border: 0.1rem solid #FFFFFF;
 				border-radius: 0.4rem;
 				transition: 0,5s;
 				&:hover {
@@ -137,12 +161,14 @@
 		z-index: 10;
 		width: 100vw;
 		height: 100vh;
-		transition: 1s;
+		transition: 0.5s;
 		opacity: 0;
 		visibility: hidden;
 		&.active {
 			visibility: visible;
 			opacity: 1;
+			top: 0 !important;
+			left: 0 !important;
 		}
 		&.fir {
 			background-image: url('../img/mywork/frame_react.png');
@@ -203,10 +229,20 @@
 		}
 	}
 	&.active {
+		.wire {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			transition: 5s;
+			&.second {
+				clip-path: circle(86.2% at 56% 34%);
+				transition: 4s;
+				transition-delay: 0.5s;
+			}
+		}
 		.title {
+			transition: 1s;
+			transition-delay: 0.2s;
 			transform: translateY(0);
 			opacity: 1;
-			width: 40vw;
 		}
 	}
 	.myworkcloser {

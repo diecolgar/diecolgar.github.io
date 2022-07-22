@@ -51,7 +51,6 @@ function activateSlide() {
             id != 2 ? myworkselectablecontainer.classList.remove("minimized") : ""
             id != 2 ? myworkselectablecontainer.style.opacity = 0 : myworkselectablecontainer.style.opacity = 1
             id != 2 ? myworkcloser.classList.remove("active") : ""
-            id != 2 ? myworktitle.style.opacity = 1 : ""
             id != 2 ? myworkdisplayables.forEach((displayable) => {displayable.classList.remove('active')}) : ""
         }
     });
