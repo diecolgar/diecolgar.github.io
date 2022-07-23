@@ -23,7 +23,7 @@
 		width: 100vw;
 		height: 100vh;
 		transition: 1s;
-		background-image: url(/img/contact/wire.png);
+		background-image: url(/img/contact/wiro.png);
 		background-size: cover;
 		background-position: center;
 		clip-path: circle(0% at 8.5% 0);
@@ -36,6 +36,7 @@
 		height: 100vh;
 		transition: 1s;
 		background-image: url(/img/contact/frame.png);
+		background-size: cover;
 		clip-path: circle(4% at 50% 101%);
 		&:hover {
 			cursor: pointer;

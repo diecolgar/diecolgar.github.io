@@ -2,16 +2,32 @@
 	body {
 		overflow-y: auto;
 	}
+	.mobileadvice {
+		position: absolute;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		top: 0;
+		left: 0;
+		z-index: 1000000;
+		background-color: rgb(0, 0, 0);
+		color: white;
+		width: 100vw;
+		height: 100vh;
+		
+	}
 	.content {
 		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
 		height: 100vh;
-		background-image: none;
+		background: none !important;
 	}
 	section {
 		scroll-snap-align: start;
 	}
 	.home {
+		// background-color: rgb(0, 0, 0);
 		background-image: url('../img/background1.jpg');
 		background-position: center;
 		background-size: cover;
@@ -25,17 +41,23 @@
 		}
 	}
 	.aboutme {
+		// background-color: red;
 		background-image: url('../img/background2.jpg');
 		background-position: center;
 		background-size: cover;
+		.mystory {
+			width: 0;
+		}
 	}
 	.mywork {
-		background-image: url('../img/background3.jpg');
+		// background-image: url('../img/background3.jpg');
+		background-color: blue;
 		background-position: center;
 		background-size: cover;
 	}
 	.contact {
-		background-image: url('../img/background4.jpg');
+		// background-image: url('../img/background4.jpg');
+		background-color: blueviolet;
 		background-position: center;
 		background-size: cover;
 	}

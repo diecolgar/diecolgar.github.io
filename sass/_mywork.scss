@@ -89,7 +89,7 @@
 				}
 			}
 			&.thi {
-				background-image: url('../img/mywork/minipeopleinthejungle.png');
+				background-image: url('../img/mywork/small_minipeopleinthejungle.png');
 				background-size: cover;
 				background-position: center;
 				&:hover {
@@ -249,10 +249,10 @@
 		position: absolute;
 		display: flex;
 		align-items: center;
-		top: 10vh;
-		left: 79vw;
-		width: 3vw;
-		height: 3vw;
+		top: 15vh;
+		left: 76vw;
+		width: 3rem;
+		height: 3rem;
 		background-color: rgba(0, 0, 0, 0);
 		z-index: 15;
 		visibility: hidden;
@@ -266,23 +266,23 @@
 			cursor: pointer;
 			.stick {
 				&.one {
-					transform: translateX(0.75vw) rotate(225deg);
+					transform: translateX(0.75rem) rotate(225deg);
 				}
 				&.two {
-					transform: translateX(-0.75vw) rotate(-225deg);
+					transform: translateX(-0.75rem) rotate(-225deg);
 				}	
 			}
 		}
 		.stick {
-			width: 2vw;
+			width: 1.5rem;
 			height: 3px;
 			background-color: white;
 			transition: 0.5s;
 			&.one {
-				transform: translateX(0.75vw) rotate(45deg);
+				transform: translateX(0.75rem) rotate(45deg);
 			}
 			&.two {
-				transform: translateX(-0.75vw) rotate(-45deg);
+				transform: translateX(-0.75rem) rotate(-45deg);
 			}
 		}
 	}
