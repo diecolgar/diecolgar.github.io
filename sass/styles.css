@@ -1311,8 +1311,8 @@ nav.hidden .left {
 .contact.active .title {
   -webkit-transition-delay: 1.5s;
           transition-delay: 1.5s;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 

@@ -107,7 +107,7 @@
 	&.active {
 		.title {
 			transition-delay: 1.5s;
-			transform: translateX(0);
+			transform: translateY(0);
 			opacity: 1;
 		}
 		.wire {
