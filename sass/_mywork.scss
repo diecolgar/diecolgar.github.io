@@ -9,9 +9,9 @@
 		left: 0;
 		color: white;
 		font-size: 14vh;
-		transform: translateY(20vh);
 		opacity: 0;
 		transition: 2s;
+		transition-delay: 0;
 	}
 	.wire {
 		position: absolute;
@@ -41,7 +41,7 @@
 		left: 5vw;
 		height: 13vh;
 		width: 90vw;
-		transition: 0.5s;
+		transition: 1s;
 		.selectable {
 			width: 11.5vw;
 			height: 13vh;
@@ -239,8 +239,8 @@
 			}
 		}
 		.title {
-			transition: 1s;
-			transition-delay: 0.2s;
+			transition: 1.5s;
+			transition-delay: 0.5s;
 			transform: translateY(0);
 			opacity: 1;
 		}

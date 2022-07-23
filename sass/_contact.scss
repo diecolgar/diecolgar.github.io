@@ -13,7 +13,7 @@
 		color: white;
 		font-size: 14vh;
 		transition: 1s;
-		transform: translateX(20vh);
+		transform: translateY(20vh);
 		opacity: 0;
 	}
 	.wire {
@@ -30,7 +30,7 @@
 	}
 	.clickmeimage {
 		position: absolute;
-		top: 0;
+		top: 10vh;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
@@ -47,7 +47,8 @@
 		justify-content: center;
 		text-align: center;
 		left: 0;
-		top: 97vh;
+		top: 110vh;
+		transition: 1.5s;
 		font-size: 2vh;
 		letter-spacing: 0.2rem;
 		color: white;
@@ -105,13 +106,21 @@
 	}
 	&.active {
 		.title {
-			transition-delay: 1s;
+			transition-delay: 1.5s;
 			transform: translateX(0);
 			opacity: 1;
 		}
 		.wire {
 			transition: 4.5s;
 			clip-path: circle(100% at 8.5% 0);
+		}
+		.clickmetext {
+			top: 97vh;
+			transition-delay: 2s;	
+		}
+		.clickmeimage {
+			top: 0;
+			transition-delay: 2s;
 		}
 		&.opened {
 			.title {
@@ -123,6 +132,7 @@
 			.clickmeimage {
 				clip-path: circle(100% at 50% 101%);
 				cursor: default;
+				transition-delay: 0s;
 			}
 			.clickmetext {
 				transition: 0.2s;

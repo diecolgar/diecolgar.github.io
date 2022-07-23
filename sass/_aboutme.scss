@@ -6,12 +6,12 @@
 		justify-content: center;
 		opacity: 0;
 		position: relative;
-		top: 15vh;
+		top: 20vh;
 		left: 0;
 		width: 100vw;
 		color: white;
 		transform: translateY(-20vh);
-		transition: 0.8s;
+		transition: 1.5s;
 		font-size: 14vh;
 		z-index: 10;
 	}
@@ -315,6 +315,7 @@
 
 	&.active {
 		.title {
+			transition-delay: 1s;
 			transform: translateY(0);
 			opacity: 1;
 		}
