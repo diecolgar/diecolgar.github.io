@@ -133,6 +133,56 @@ nav.hidden .left {
   visibility: hidden;
 }
 
+nav.hidden .sliding {
+  -webkit-transform: translateX(-5vw);
+          transform: translateX(-5vw);
+}
+
+nav .sliding {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  top: -42vh;
+  left: -10vw;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  /*sets the base colour for the contrast*/
+  opacity: 0.8;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+nav .sliding div {
+  position: relative;
+  background: rgba(255, 255, 255, 0);
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+nav .sliding div.ball {
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-2.6rem);
+          transform: translateY(-2.6rem);
+  background: white;
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1373,10 +1423,10 @@ nav.hidden .left {
 
 @media (max-width: 800px) {
   body {
-    overflow-y: auto;
+    overflow-y: hidden;
   }
   .mobileadvice {
-    position: absolute;
+    position: fixed;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;

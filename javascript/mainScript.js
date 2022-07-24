@@ -55,6 +55,7 @@ function activateSlide() {
             id != 3 ? contact.classList.remove('opened') : ""
         }
     });
+    // document.querySelector('nav .sliding .ball').style.transform = `translateY(${-2.6 + currentSlide*1.75}rem)`
 }
 
 // RESET HORIZONTAL POSITION
