@@ -366,6 +366,21 @@ nav .sliding div.ball {
   opacity: 0;
 }
 
+.aboutme .infoabout .infotext .infoitem:nth-child(1) {
+  -webkit-transform: translateX(-5rem);
+          transform: translateX(-5rem);
+}
+
+.aboutme .infoabout .infotext .infoitem:nth-child(2) {
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.aboutme .infoabout .infotext .infoitem:nth-child(3) {
+  -webkit-transform: translateX(5rem);
+          transform: translateX(5rem);
+}
+
 .aboutme .infoabout .infotext .infoitem .icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -471,6 +486,8 @@ nav .sliding div.ball {
   transition: 1s;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+  -webkit-transform: translateX(5rem) translateY(-2rem);
+          transform: translateX(5rem) translateY(-2rem);
 }
 
 .aboutme .infoabout .infoicons .inforow .infoicon img {
@@ -652,7 +669,7 @@ nav .sliding div.ball {
 .aboutme .mystory .story p {
   width: 23vw;
   color: white;
-  font-size: 1vw;
+  font-size: 1rem;
   font-weight: 300;
   margin-bottom: 1rem;
   text-indent: 2rem;
@@ -719,50 +736,54 @@ nav .sliding div.ball {
 
 .aboutme.active .infoabout .infotext .infoitem {
   opacity: 1;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
 }
 
 .aboutme.active .infoabout .infotext .infoitem:nth-child(1) {
-  -webkit-transition-delay: 1.6s;
-          transition-delay: 1.6s;
+  -webkit-transition-delay: 3.2s;
+          transition-delay: 3.2s;
 }
 
 .aboutme.active .infoabout .infotext .infoitem:nth-child(2) {
-  -webkit-transition-delay: 1.8s;
-          transition-delay: 1.8s;
+  -webkit-transition-delay: 3.85s;
+          transition-delay: 3.85s;
 }
 
 .aboutme.active .infoabout .infotext .infoitem:nth-child(3) {
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
+  -webkit-transition-delay: 4.5s;
+          transition-delay: 4.5s;
 }
 
 .aboutme.active .infoicons .inforow .infoicon {
   opacity: 1;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
 }
 
 .aboutme.active .infoicons .inforow .infoicon:nth-child(1) {
-  -webkit-transition-delay: 1.6s;
-          transition-delay: 1.6s;
-}
-
-.aboutme.active .infoicons .inforow .infoicon:nth-child(2) {
   -webkit-transition-delay: 1.8s;
           transition-delay: 1.8s;
 }
 
-.aboutme.active .infoicons .inforow .infoicon:nth-child(3) {
+.aboutme.active .infoicons .inforow .infoicon:nth-child(2) {
   -webkit-transition-delay: 2s;
           transition-delay: 2s;
 }
 
-.aboutme.active .infoicons .inforow .infoicon:nth-child(4) {
+.aboutme.active .infoicons .inforow .infoicon:nth-child(3) {
   -webkit-transition-delay: 2.2s;
           transition-delay: 2.2s;
 }
 
+.aboutme.active .infoicons .inforow .infoicon:nth-child(4) {
+  -webkit-transition-delay: 2.4s;
+          transition-delay: 2.4s;
+}
+
 .aboutme.active .infoicons .inforow .infoicon:nth-child(5) {
-  -webkit-transition-delay: 2.2s;
-          transition-delay: 2.2s;
+  -webkit-transition-delay: 2.6s;
+          transition-delay: 2.6s;
 }
 
 .aboutme.active .wire {
@@ -1210,8 +1231,8 @@ nav .sliding div.ball {
   background-image: url(/img/contact/wiro.png);
   background-size: cover;
   background-position: center;
-  -webkit-clip-path: circle(0% at 8.5% 0);
-          clip-path: circle(0% at 8.5% 0);
+  -webkit-clip-path: polygon(0 0, 23% 0, 23% 0, 0 0);
+          clip-path: polygon(0 0, 23% 0, 23% 0, 0 0);
 }
 
 .contact .clickmeimage {
@@ -1346,10 +1367,10 @@ nav .sliding div.ball {
 }
 
 .contact.active .wire {
-  -webkit-transition: 4.5s;
-  transition: 4.5s;
-  -webkit-clip-path: circle(100% at 8.5% 0);
-          clip-path: circle(100% at 8.5% 0);
+  -webkit-transition: 3.5s ease-out;
+  transition: 3.5s ease-out;
+  -webkit-clip-path: polygon(0 0, 23% 0, 100% 52%, 0 100%);
+          clip-path: polygon(0 0, 23% 0, 100% 52%, 0 100%);
 }
 
 .contact.active .clickmetext {
