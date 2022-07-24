@@ -289,7 +289,7 @@ nav .sliding div.ball {
           justify-content: center;
   opacity: 0;
   position: relative;
-  top: 20vh;
+  top: 15vh;
   left: 0;
   width: 100vw;
   color: white;
@@ -310,70 +310,14 @@ nav .sliding div.ball {
   -webkit-transition: 1s;
   transition: 1s;
   clip: rect(0, 4vw, 100vh, 0);
-  background-image: url(/img/aboutme/wire.png);
+  background-image: url(/img/aboutme/wire4.png);
   background-size: cover;
   background-position: center;
   z-index: -10;
 }
 
-.aboutme .aboutitems {
+.aboutme .infoabout {
   position: absolute;
-  top: 43vh;
-  left: 22vw;
-  width: 25vw;
-  height: 40vh;
-  color: white;
-}
-
-.aboutme .aboutitems .background {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  top: -33vh;
-  left: 22.6vw;
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: rotate(90deg) translateX(-10vh);
-          transform: rotate(90deg) translateX(-10vh);
-  font-size: 2.1vh;
-  font-weight: 500;
-  width: 15vh;
-  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
-  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.aboutme .aboutitems .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  width: 100%;
-  height: 33%;
-  display: flex;
-  -webkit-transition: 1s;
-  transition: 1s;
-  opacity: 0;
-  font-size: 1.7vh;
-}
-
-.aboutme .aboutitems .item .right {
-  margin-left: 1.3vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.aboutme .aboutitems .item .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,103 +325,23 @@ nav .sliding div.ball {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-weight: 300;
+  width: 100vw;
+  top: 35vh;
+  left: 0;
 }
 
-.aboutme .aboutitems .item .left p {
+.aboutme .infoabout .infotext {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.aboutme .aboutitems .item .left .up {
-  font-weight: 500;
-  font-size: 1.9vh;
-  background: -webkit-gradient(linear, right top, left top, from(#ec4a21), to(#b24ae2));
-  background: linear-gradient(to left, #ec4a21 0%, #b24ae2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.aboutme .aboutitems .item.origin {
-  -webkit-transform: translateX(-5vw);
-          transform: translateX(-5vw);
-}
-
-.aboutme .aboutitems .item.origin .right {
-  height: 35%;
-}
-
-.aboutme .aboutitems .item.studies {
-  -webkit-transform: translateX(-10vw);
-          transform: translateX(-10vw);
-}
-
-.aboutme .aboutitems .item.studies .right {
-  height: 35%;
-}
-
-.aboutme .aboutitems .item.work {
-  -webkit-transform: translateX(-15vw);
-          transform: translateX(-15vw);
-}
-
-.aboutme .aboutitems .item.work .right {
-  height: 35%;
-}
-
-.aboutme .skillsitems {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  top: 43vh;
-  left: 45vw;
-  width: 30vw;
-  height: 30vh;
-  color: white;
-}
-
-.aboutme .skillsitems .myskills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  top: 23vh;
-  left: 1.9vw;
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: rotate(-90deg) translateX(-10vh);
-          transform: rotate(-90deg) translateX(-10vh);
-  font-size: 2.2vh;
-  font-weight: 500;
-  width: 12vh;
-  background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
-  background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.aboutme .skillsitems .itemwrapper {
-  display: -ms-grid;
-  display: grid;
-  margin-top: 0.5vw;
-  width: 15vw;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2.6vh;
-}
-
-.aboutme .skillsitems .itemwrapper .item {
+.aboutme .infoabout .infotext .infoitem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,27 +349,143 @@ nav .sliding div.ball {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-weight: 300;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.7vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10rem;
+  height: 7rem;
+  margin: 1rem;
   color: white;
-  height: 6vh;
-  width: 6vh;
-  -webkit-transform: translateX(10vh);
-          transform: translateX(10vh);
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
   opacity: 0;
 }
 
-.aboutme .skillsitems .itemwrapper .item img {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 4vh;
-  width: 4vh;
+.aboutme .infoabout .infotext .infoitem .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.aboutme .infoabout .infotext .infoitem .icon.career {
+  background-image: url(/img/aboutme/graduate.png);
+  background-size: cover;
+}
+
+.aboutme .infoabout .infotext .infoitem .icon.palace {
+  background-image: url(/img/aboutme/palace.svg);
+  background-size: cover;
+}
+
+.aboutme .infoabout .infotext .infoitem .icon.work {
+  background-image: url(/img/aboutme/mac.png);
+  background-size: cover;
+}
+
+.aboutme .infoabout .infotext .infoitem .titletext {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.3rem;
+  width: 20rem;
+  text-transform: uppercase;
+}
+
+.aboutme .infoabout .infotext .infoitem .titletext.aero {
+  background: -webkit-gradient(linear, left top, right top, from(#c94ae2), to(#ec4a21));
+  background: linear-gradient(to right, #c94ae2 0%, #ec4a21 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutme .infoabout .infotext .infoitem .titletext.madrid {
+  background: -webkit-gradient(linear, left top, right top, from(#cf5739), to(#6520e4));
+  background: linear-gradient(to right, #cf5739 0%, #6520e4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutme .infoabout .infotext .infoitem .titletext.front {
+  background: -webkit-gradient(linear, left top, right top, from(#6520e4), to(#cf5739));
+  background: linear-gradient(to right, #6520e4 0%, #cf5739 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutme .infoabout .infotext .infoitem .text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8rem;
+  width: 20rem;
+}
+
+.aboutme .infoabout .infoicons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+}
+
+.aboutme .infoabout .infoicons .inforow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5rem;
+  background-color: black;
+  padding: 1vh;
+}
+
+.aboutme .infoabout .infoicons .inforow .infoicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 0.5rem;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.aboutme .infoabout .infoicons .inforow .infoicon img {
+  margin: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.aboutme .infoabout .infoicons .inforow .infoicon .text {
+  text-align: center;
+  width: 4rem;
+  height: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: white;
 }
 
 .aboutme .readmystory {
@@ -522,7 +502,8 @@ nav .sliding div.ball {
           justify-content: center;
   top: 60vh;
   right: 0vw;
-  font-size: 2vh;
+  font-size: 1rem;
+  font-weight: 600;
   background: -webkit-gradient(linear, left top, right top, from(#ec4a21), to(#b24ae2));
   background: linear-gradient(to right, #ec4a21 0%, #b24ae2 100%);
   background-clip: text;
@@ -736,62 +717,60 @@ nav .sliding div.ball {
   opacity: 1;
 }
 
+.aboutme.active .infoabout .infotext .infoitem {
+  opacity: 1;
+}
+
+.aboutme.active .infoabout .infotext .infoitem:nth-child(1) {
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+
+.aboutme.active .infoabout .infotext .infoitem:nth-child(2) {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+
+.aboutme.active .infoabout .infotext .infoitem:nth-child(3) {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.aboutme.active .infoicons .inforow .infoicon {
+  opacity: 1;
+}
+
+.aboutme.active .infoicons .inforow .infoicon:nth-child(1) {
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+
+.aboutme.active .infoicons .inforow .infoicon:nth-child(2) {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+
+.aboutme.active .infoicons .inforow .infoicon:nth-child(3) {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.aboutme.active .infoicons .inforow .infoicon:nth-child(4) {
+  -webkit-transition-delay: 2.2s;
+          transition-delay: 2.2s;
+}
+
+.aboutme.active .infoicons .inforow .infoicon:nth-child(5) {
+  -webkit-transition-delay: 2.2s;
+          transition-delay: 2.2s;
+}
+
 .aboutme.active .wire {
   clip: rect(0, 100vw, 100vh, 0vh);
   -webkit-transition: 4s;
   transition: 4s;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
-}
-
-.aboutme.active .aboutitems .background {
-  opacity: 1;
-  -webkit-transform: rotate(90deg) translateX(0);
-          transform: rotate(90deg) translateX(0);
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
-}
-
-.aboutme.active .aboutitems .item {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition-delay: 1.4s;
-          transition-delay: 1.4s;
-  opacity: 1;
-}
-
-.aboutme.active .skillsitems .myskills {
-  opacity: 1;
-  -webkit-transform: rotate(-90deg) translateX(0);
-          transform: rotate(-90deg) translateX(0);
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s;
-}
-
-.aboutme.active .skillsitems .itemwrapper .item {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.aboutme.active .skillsitems .itemwrapper .item.firstrow {
-  -webkit-transition-delay: 1.7s;
-          transition-delay: 1.7s;
-}
-
-.aboutme.active .skillsitems .itemwrapper .item.secondrow {
-  -webkit-transition-delay: 1.9s;
-          transition-delay: 1.9s;
-}
-
-.aboutme.active .skillsitems .itemwrapper .item.thirdrow {
-  -webkit-transition-delay: 2.4s;
-          transition-delay: 2.4s;
-}
-
-.aboutme.active .skillsitems .itemwrapper .item.fourthrow {
-  -webkit-transition-delay: 2.6s;
-          transition-delay: 2.6s;
 }
 
 .aboutme.active .readmystory {
